@@ -2,24 +2,7 @@
 
 ## Facultad de Ingeniería
 
-<table>
-<tr>
-<td valign="top" width="50%">
-
-### 📚 Nombre del curso
-
-| **Ítem**        | **Detalle**                    |
-| --------------- | ------------------------------ |
-| **Código**      | 0000                           |
-| **Sección**     | A                              |
-| **Créditos**    | N                              |
-| **Período**     | Primer / Segundo Semestre 202X |
-| **Catedrático** | Nombre del docente             |
-| **Auxiliar**    | Nombre del auxiliar            |
-
-</td>
-
-<td valign="top" width="50%">
+<div align="center">
 
 ### 👤 Estudiante
 
@@ -27,38 +10,62 @@
 | --------- | ---------------------------------- |
 | 202504020 | Patricio Manuel Romero Castellanos |
 
-</td>
-</tr>
-</table>
+### 📚 Organización Computacional
+
+| **Ítem**        | **Detalle**                     |
+| --------------- | ------------------------------- |
+| **Código**      | 0964                            |
+| **Sección**     | A                               |
+| **Créditos**    | 5                               |
+| **Período**     | Vacaciones Primer Semestre 2026 |
+| **Catedrático** | Carlos Amilcar Lozano           |
+| **Auxiliar**    | Carlos José Blanco Guzmán       |
+
+</div>
 
 ---
 
 ## ℹ️ Descripción
 
-Este repositorio contiene las actividades desarrolladas a lo largo del curso. Cada carpeta corresponde a una actividad, tarea, práctica o proyecto realizado durante el período académico, incluyendo la documentación y los recursos necesarios para su desarrollo.
+Este repositorio contiene material de estudio correspondiente al curso, organizado siguiendo la estructura del programa oficial. Cada carpeta representa una unidad y contiene los temas desarrollados a partir de la bibliografía establecida para el curso.
 
 ---
 
-## 🗂️ Organización del Repositorio
+## 🗂️ Organización del contenido
 
 ```text
 /
-├── 📂 Actividad/
-│   └── README.md
-├── 📂 Presentaciones/
-│   ├── 📂 Magistral/
-│   └── 📂 Laboratorio/
-├── 📂 Material de apoyo/
+├── 📂 Unidad 1/
+│   ├── Tema 1.md
+│   ├── Tema 2.md
+│   ├── Tema 3.md
+│   └── ...
+├── 📂 Unidad 2/
+│   ├── Tema 1.md
+│   ├── Tema 2.md
+│   ├── Tema 3.md
+│   └── ...
+├── 📂 Unidad 3/
+│   ├── Tema 1.md
+│   ├── Tema 2.md
+│   ├── Tema 3.md
+│   └── ...
+├── 📂 Bibliografía
+│   └── Lógica Digital y Diseño de Computadores.pdf
+├── 📄 PROGRAMA.md
 └── 📄 README.md
 ```
 
 ---
 
-## 🔗 Accesos Directos
+## 🔗 Accesos directos
 
-- [Actividad](./Actividad/README.md)
+- [Programa del curso](./PROGRAMA.md)
+- [Unidad 1](./Unidad%201/U1-T1.md)
+- [Unidad 2](./Unidad%202/U2-T1.md)
+- [Unidad 3](./Unidad%203/U3-T1.md)
 
-*Los enlaces serán actualizados conforme se agreguen los trabajos.*
+*Los enlaces se irán actualizando conforme se desarrolle el contenido.*
 
 ---
 
