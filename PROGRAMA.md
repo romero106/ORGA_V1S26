@@ -12,8 +12,7 @@ posrequisito:
   - 0281 Sistemas Operativos 1
   - 0778 Arquitectura de Computadores y Ensambladores 1
 ---
-**UNIVERSIDAD DE SAN CARLOS DE GUATEMALA**  
-**FACULTAD DE INGENIERÍA**
+
 # Programa del curso
 
 ## Descripción
@@ -32,15 +31,15 @@ De una forma general el curso busca introducir al estudiante en la aplicación d
 
 ### Unidad 1: Lógica Combinacional
 
-- [Bases numéricas](U1-T1.md)
-- [Lógica binaria](U1-T2.md)
-- [Compuertas lógicas](U1-T3)
-- [Métodos de agrupación](U1-T4)
-- [Álgebra de Boole](U1-T5)
-- [Métodos de simplificación](U1-T6)
-- [Códigos binarios y Complemento en base r & r-](U1-T7)
-- [Diseño con lógica combinacional](U1-T8)
-- [Bloques digitales combinacionales de mediana escala de integración](U1-T9)
+- [Bases numéricas](Unidad%201/Tema%201)
+- [Lógica binaria](Unidad%201/Tema%202.md)
+- [Compuertas lógicas](Unidad%201/Tema%203.md)
+- [Métodos de agrupación](Unidad%201/Tema%204.md)
+- [Álgebra de Boole](Unidad%201/Tema%205.md)
+- [Métodos de simplificación](Unidad%201/Tema%206.md)
+- [Códigos binarios y Complemento en base r & r-](Unidad%201/Tema%207.md)
+- [Diseño con lógica combinacional](Unidad%201/Tema%208.md)
+- [Bloques digitales combinacionales de mediana escala de integración](Unidad%201/Tema%209.md)
 
 ### Unidad 2: Lógica Secuencial
 
