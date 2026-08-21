@@ -492,7 +492,9 @@ $$
 > \boxed{F=A'B'D'+B'C'D'+AD'E}
 > $$
 
-<p align="right">
-  <a href="./Tema%203.md" style="float: left;">⬅️ Tema anterior</a>
-  <a href="./Tema%205.md">Siguiente tema ➡️</a>
-</p>
+<table width="100%">
+  <tr>
+    <td align="left"><a href="./Tema%203.md">⬅️ Tema anterior</a></td>
+    <td align="right"><a href="./Tema%205.md">Siguiente tema ➡️</a></td>
+  </tr>
+</table>

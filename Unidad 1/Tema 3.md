@@ -570,7 +570,9 @@ $$
 > [!tip]
 > Cada compuerta requiere una patilla por entrada y una patilla adicional para su salida.
 
-<p align="right">
-  <a href="./Tema%202.md" style="float: left;">⬅️ Tema anterior</a>
-  <a href="./Tema%204.md">Siguiente tema ➡️</a>
-</p>
+<table width="100%">
+  <tr>
+    <td align="left"><a href="./Tema%202.md">⬅️ Tema anterior</a></td>
+    <td align="right"><a href="./Tema%204.md">Siguiente tema ➡️</a></td>
+  </tr>
+</table>
