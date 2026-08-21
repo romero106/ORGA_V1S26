@@ -24,7 +24,8 @@ En un sistema **posicional**, el valor de un dígito depende de:
 2. La posición que ocupa.
 3. La base del sistema.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > En el número decimal `7392`, el dígito `7` no representa siete unidades, sino siete millares, porque ocupa la posición correspondiente a $10^3$:
 >
 > $$
@@ -41,13 +42,13 @@ $$
 0 \quad \text{y} \quad r-1
 $$
 
-|Base|Cantidad de dígitos|Dígitos permitidos|
-|---:|---:|---|
-|$2$|2|$0,1$|
-|$5$|5|$0,1,2,3,4$|
-|$8$|8|$0,1,2,3,4,5,6,7$|
-|$10$|10|$0,1,2,3,4,5,6,7,8,9$|
-|$16$|16|$0,1,\ldots,9,A,B,C,D,E,F$|
+| Base | Cantidad de dígitos | Dígitos permitidos         |
+| ---: | ------------------: | -------------------------- |
+|  $2$ |                   2 | $0,1$                      |
+|  $5$ |                   5 | $0,1,2,3,4$                |
+|  $8$ |                   8 | $0,1,2,3,4,5,6,7$          |
+| $10$ |                  10 | $0,1,2,3,4,5,6,7,8,9$      |
+| $16$ |                  16 | $0,1,\ldots,9,A,B,C,D,E,F$ |
 
 > [!warning]
 > Ningún dígito puede ser igual o mayor que la base.
@@ -58,12 +59,12 @@ $$
 
 Para evitar ambigüedades, la base se escribe como un subíndice a la derecha del número:
 
-|Notación|Interpretación|
-|---|---|
-|$(1010,011)_2$|Número expresado en base 2|
-|$(630,4)_8$|Número expresado en base 8|
-|$(7392)_{10}$|Número expresado en base 10|
-|$(B65F)_{16}$|Número expresado en base 16|
+| Notación       | Interpretación              |
+| -------------- | --------------------------- |
+| $(1010,011)_2$ | Número expresado en base 2  |
+| $(630,4)_8$    | Número expresado en base 8  |
+| $(7392)_{10}$  | Número expresado en base 10 |
+| $(B65F)_{16}$  | Número expresado en base 16 |
 
 El subíndice es especialmente importante cuando el contenido del número no permite deducir su base de manera inequívoca.
 
@@ -96,7 +97,8 @@ flowchart LR
     E --> F["r^-1, r^-2, r^-3, ..."]
 ```
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para interpretar $(4021,2)_5$, se multiplica cada dígito por el peso de su posición:
 >
 > $$
@@ -111,12 +113,12 @@ flowchart LR
 
 En organización computacional se utilizan principalmente los sistemas decimal, binario, octal y hexadecimal.
 
-|Sistema|Base|Dígitos|Uso principal|
-|---|---:|---|---|
-|Decimal|10|`0` a `9`|Representación cotidiana de cantidades|
-|Binario|2|`0` y `1`|Representación interna en sistemas digitales|
-|Octal|8|`0` a `7`|Forma compacta de representar grupos de 3 bits|
-|Hexadecimal|16|`0` a `9` y `A` a `F`|Forma compacta de representar grupos de 4 bits|
+| Sistema     | Base | Dígitos               | Uso principal                                  |
+| ----------- | ---: | --------------------- | ---------------------------------------------- |
+| Decimal     |   10 | `0` a `9`             | Representación cotidiana de cantidades         |
+| Binario     |    2 | `0` y `1`             | Representación interna en sistemas digitales   |
+| Octal       |    8 | `0` a `7`             | Forma compacta de representar grupos de 3 bits |
+| Hexadecimal |   16 | `0` a `9` y `A` a `F` | Forma compacta de representar grupos de 4 bits |
 
 ### 2.1 Sistema decimal
 
@@ -151,7 +153,8 @@ El sistema **octal** tiene base 8 y utiliza los dígitos del `0` al `7`.
 
 Como $8=2^3$, cada dígito octal representa exactamente tres bits.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Equivalencia de la Tabla 1-1 del libro.
 >
 > $$
@@ -173,7 +176,8 @@ El sistema **hexadecimal** tiene base 16. Utiliza los diez dígitos decimales y 
 
 Como $16=2^4$, cada dígito hexadecimal representa exactamente cuatro bits.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Equivalencia de la Tabla 1-1 del libro.
 >
 > $$
@@ -182,24 +186,24 @@ Como $16=2^4$, cada dígito hexadecimal representa exactamente cuatro bits.
 
 ### Comparación de valores entre sistemas
 
-|Decimal|Binario|Octal|Hexadecimal|
-|---:|:---:|:---:|:---:|
-|0|0000|0|0|
-|1|0001|1|1|
-|2|0010|2|2|
-|3|0011|3|3|
-|4|0100|4|4|
-|5|0101|5|5|
-|6|0110|6|6|
-|7|0111|7|7|
-|8|1000|10|8|
-|9|1001|11|9|
-|10|1010|12|A|
-|11|1011|13|B|
-|12|1100|14|C|
-|13|1101|15|D|
-|14|1110|16|E|
-|15|1111|17|F|
+| Decimal | Binario | Octal | Hexadecimal |
+| ------: | :-----: | :---: | :---------: |
+|       0 |  0000   |   0   |      0      |
+|       1 |  0001   |   1   |      1      |
+|       2 |  0010   |   2   |      2      |
+|       3 |  0011   |   3   |      3      |
+|       4 |  0100   |   4   |      4      |
+|       5 |  0101   |   5   |      5      |
+|       6 |  0110   |   6   |      6      |
+|       7 |  0111   |   7   |      7      |
+|       8 |  1000   |  10   |      8      |
+|       9 |  1001   |  11   |      9      |
+|      10 |  1010   |  12   |      A      |
+|      11 |  1011   |  13   |      B      |
+|      12 |  1100   |  14   |      C      |
+|      13 |  1101   |  15   |      D      |
+|      14 |  1110   |  16   |      E      |
+|      15 |  1111   |  17   |      F      |
 
 ## 3. Conversión de una base a decimal
 
@@ -211,7 +215,8 @@ Para convertir un número de base $r$ a decimal se utiliza su expansión posicio
 
 ### 3.1 Conversión de la parte entera
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Convertir $(B65F)_{16}$ a decimal. 
 > 
 > En hexadecimal, $F=15$:
@@ -228,7 +233,8 @@ Para convertir un número de base $r$ a decimal se utiliza su expansión posicio
 
 Los dígitos situados a la derecha del punto se multiplican por potencias negativas de la base.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Convertir $(1010,011)_2$ a decimal.
 > 
 > $$
@@ -246,7 +252,8 @@ Los dígitos situados a la derecha del punto se multiplican por potencias negati
 
 Un número mixto posee una parte entera y una parte fraccionaria. Ambas se evalúan en una sola expansión posicional.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Convertir $(630,4)_8$ a decimal.
 >
 > $$
@@ -285,7 +292,8 @@ El procedimiento para convertir un entero decimal a base $r$ es:
 4. Repetir hasta obtener un cociente igual a cero.
 5. Leer los residuos desde el último hasta el primero.
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > Convertir $(41)_{10}$ a binario.
 >
 >|División|Cociente|Residuo|
@@ -303,7 +311,8 @@ El procedimiento para convertir un entero decimal a base $r$ es:
 > (41)_{10}=(101001)_2
 > $$
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > Convertir $(153)_{10}$ a octal.
 >
 >|División|Cociente|Residuo|
@@ -329,7 +338,8 @@ El procedimiento para convertir una fracción decimal a base $r$ es:
 4. Repetir hasta que la fracción sea cero o se alcance la precisión requerida.
 5. Leer las partes enteras desde la primera hasta la última.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Convertir $(0,6875)_{10}$ a binario.
 >
 >|Multiplicación|Parte entera|Nueva fracción|
@@ -354,7 +364,8 @@ El procedimiento para convertir una fracción decimal a base $r$ es:
 
 La parte entera y la fraccionaria se convierten por separado y después se unen alrededor del punto.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 >
 > De los procedimientos anteriores:
 >
@@ -392,7 +403,8 @@ flowchart LR
 2. Agregar ceros en los extremos si algún grupo queda incompleto.
 3. Sustituir cada grupo por su dígito octal equivalente.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El número binario se agrupa en bloques de tres bits a partir del punto:
 >
 > $$
@@ -411,7 +423,8 @@ flowchart LR
 
 El procedimiento es el mismo, pero los bits se separan en grupos de cuatro.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El mismo procedimiento se realiza con grupos de cuatro bits:
 >
 > $$
@@ -439,7 +452,8 @@ Para realizar la conversión inversa, cada dígito se sustituye por el grupo bin
 - Cada dígito octal se convierte en **3 bits**.
 - Cada dígito hexadecimal se convierte en **4 bits**.
 
-> [!example]- Ejemplo 1
+> **Ejemplo**
+> 1
 > Convertir $(673,124)_8$ a binario.
 >
 > $$
@@ -454,7 +468,8 @@ Para realizar la conversión inversa, cada dígito se sustituye por el grupo bin
 > (673,124)_8=(110111011,001010100)_2
 > $$
 
-> [!example]- Ejemplo 2
+> **Ejemplo**
+> 2
 > onvertir $(306,D)_{16}$ a binario.
 >
 > $$
@@ -489,12 +504,12 @@ El sistema binario se adapta directamente a los dos estados distinguibles por lo
 
 Por esta razón, octal y hexadecimal se utilizan como formas compactas de lectura:
 
-|Representación|Número|
-|---|---|
-|Binaria|$(111111111111)_2$|
-|Octal|$(7777)_8$|
-|Hexadecimal|$(FFF)_{16}$|
-|Decimal|$(4095)_{10}$|
+| Representación | Número             |
+| -------------- | ------------------ |
+| Binaria        | $(111111111111)_2$ |
+| Octal          | $(7777)_8$         |
+| Hexadecimal    | $(FFF)_{16}$       |
+| Decimal        | $(4095)_{10}$      |
 
 Las cuatro expresiones representan la misma cantidad.
 
@@ -508,16 +523,16 @@ El sistema hexadecimal es especialmente conveniente porque cada dígito reemplaz
 
 ### Resumen de métodos de conversión
 
-|Conversión|Método recomendado|Orden de lectura|
-|---|---|---|
-|Base $r$ a decimal|Expansión en potencias de $r$|De acuerdo con las posiciones|
-|Entero decimal a base $r$|Divisiones sucesivas entre $r$|Residuos de abajo hacia arriba|
-|Fracción decimal a base $r$|Multiplicaciones sucesivas por $r$|Enteros de arriba hacia abajo|
-|Binario a octal|Agrupar en 3 bits|Desde el punto hacia los extremos|
-|Binario a hexadecimal|Agrupar en 4 bits|Desde el punto hacia los extremos|
-|Octal a binario|Sustituir cada dígito por 3 bits|En el mismo orden|
-|Hexadecimal a binario|Sustituir cada dígito por 4 bits|En el mismo orden|
-|Octal a hexadecimal o viceversa|Usar binario como intermediario|Reagrupar según la base de destino|
+| Conversión                      | Método recomendado                 | Orden de lectura                   |
+| ------------------------------- | ---------------------------------- | ---------------------------------- |
+| Base $r$ a decimal              | Expansión en potencias de $r$      | De acuerdo con las posiciones      |
+| Entero decimal a base $r$       | Divisiones sucesivas entre $r$     | Residuos de abajo hacia arriba     |
+| Fracción decimal a base $r$     | Multiplicaciones sucesivas por $r$ | Enteros de arriba hacia abajo      |
+| Binario a octal                 | Agrupar en 3 bits                  | Desde el punto hacia los extremos  |
+| Binario a hexadecimal           | Agrupar en 4 bits                  | Desde el punto hacia los extremos  |
+| Octal a binario                 | Sustituir cada dígito por 3 bits   | En el mismo orden                  |
+| Hexadecimal a binario           | Sustituir cada dígito por 4 bits   | En el mismo orden                  |
+| Octal a hexadecimal o viceversa | Usar binario como intermediario    | Reagrupar según la base de destino |
 
 # Verificación del aprendizaje
 
@@ -551,7 +566,7 @@ El sistema hexadecimal es especialmente conveniente porque cada dígito reemplaz
 7. $(8,3)_9$.
 8. $(198)_{12}$.
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >

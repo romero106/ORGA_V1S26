@@ -34,11 +34,11 @@ Antes de diseñar una función con compuertas individuales conviene preguntar si
 
 ### 1.1 Escalas de integración
 
-|Escala|Enfoque funcional|Ejemplos del capítulo|
-|---|---|---|
-|SSI|Compuertas elementales|AND, OR, NOT, NAND y NOR|
-|MSI|Funciones digitales completas|Sumadores, comparadores, decodificadores y multiplexores|
-|LSI|Redes combinacionales de mayor capacidad|ROM y PLA|
+| Escala | Enfoque funcional                        | Ejemplos del capítulo                                    |
+| ------ | ---------------------------------------- | -------------------------------------------------------- |
+| SSI    | Compuertas elementales                   | AND, OR, NOT, NAND y NOR                                 |
+| MSI    | Funciones digitales completas            | Sumadores, comparadores, decodificadores y multiplexores |
+| LSI    | Redes combinacionales de mayor capacidad | ROM y PLA                                                |
 
 El bloque integrado se utiliza como una unidad funcional: basta conocer sus entradas, salidas y comportamiento para incorporarlo a un sistema mayor.
 
@@ -68,7 +68,8 @@ flowchart RL
 - $S_1$ es el bit menos significativo de la suma.
 - $S_4$ es el bit más significativo de la suma.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Sean:
 >
 > $$
@@ -114,7 +115,8 @@ Un dígito en exceso a 3 se obtiene sumando `0011` a su representación BDC. Por
 - Las salidas de suma entregan el código de exceso a 3.
 - El arrastre final no se utiliza.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para convertir el dígito decimal $5$:
 >
 > $$
@@ -182,7 +184,8 @@ $$
 
 Cada término indica dónde se generó el arrastre y por cuáles posiciones pudo propagarse.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > En la expresión de $C_4$, el término:
 >
 > $$
@@ -223,7 +226,8 @@ Cuando $C=1$, se agrega `0110` a la suma intermedia. Cuando $C=0$, se agrega `00
 
 En cuatro bits existen seis combinaciones inválidas entre `1010` y `1111`. Sumar `0110` desplaza la suma binaria hacia la representación BDC correcta y genera el arrastre decimal requerido.
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > Para sumar $7+8$:
 >
 > $$
@@ -238,7 +242,8 @@ En cuatro bits existen seis combinaciones inválidas entre `1010` y `1111`. Suma
 >
 > El resultado BDC es `0001 0101`, que representa $15$.
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > Para sumar $4+3$:
 >
 > $$
@@ -295,7 +300,8 @@ $$
 
 Cada término significa que todos los pares de mayor orden fueron iguales y que en esa posición aparece la primera desigualdad.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Compárense:
 >
 > $$
@@ -324,16 +330,16 @@ $$
 
 ### 6.1 Decodificador de 3 a 8
 
-|$x$|$y$|$z$|Salida activa|
-|:---:|:---:|:---:|:---:|
-|0|0|0|$D_0$|
-|0|0|1|$D_1$|
-|0|1|0|$D_2$|
-|0|1|1|$D_3$|
-|1|0|0|$D_4$|
-|1|0|1|$D_5$|
-|1|1|0|$D_6$|
-|1|1|1|$D_7$|
+|  $x$  |  $y$  |  $z$  | Salida activa |
+| :---: | :---: | :---: | :-----------: |
+|   0   |   0   |   0   |     $D_0$     |
+|   0   |   0   |   1   |     $D_1$     |
+|   0   |   1   |   0   |     $D_2$     |
+|   0   |   1   |   1   |     $D_3$     |
+|   1   |   0   |   0   |     $D_4$     |
+|   1   |   0   |   1   |     $D_5$     |
+|   1   |   1   |   0   |     $D_6$     |
+|   1   |   1   |   1   |     $D_7$     |
 
 Sus funciones son:
 
@@ -348,7 +354,8 @@ $$
 
 Las salidas son mutuamente excluyentes: para cada entrada válida solo una se encuentra activa.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La entrada `101` selecciona la salida $D_5$ porque:
 >
 > $$
@@ -384,7 +391,8 @@ Para un circuito de $n$ entradas y $m$ salidas se emplean:
 - Un decodificador de $n$ a $2^n$.
 - Una compuerta OR por función de salida.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El sumador completo se expresa como:
 >
 > $$
@@ -444,16 +452,16 @@ Un **codificador** realiza la operación inversa de un decodificador: recibe has
 
 ### 8.1 Codificador octal a binario
 
-|Entrada activa|$x$|$y$|$z$|
-|:---:|:---:|:---:|:---:|
-|$D_0$|0|0|0|
-|$D_1$|0|0|1|
-|$D_2$|0|1|0|
-|$D_3$|0|1|1|
-|$D_4$|1|0|0|
-|$D_5$|1|0|1|
-|$D_6$|1|1|0|
-|$D_7$|1|1|1|
+| Entrada activa |  $x$  |  $y$  |  $z$  |
+| :------------: | :---: | :---: | :---: |
+|     $D_0$      |   0   |   0   |   0   |
+|     $D_1$      |   0   |   0   |   1   |
+|     $D_2$      |   0   |   1   |   0   |
+|     $D_3$      |   0   |   1   |   1   |
+|     $D_4$      |   1   |   0   |   0   |
+|     $D_5$      |   1   |   0   |   1   |
+|     $D_6$      |   1   |   1   |   0   |
+|     $D_7$      |   1   |   1   |   1   |
 
 Las funciones de salida son:
 
@@ -494,12 +502,12 @@ Normalmente, un multiplexor posee:
 
 ### 9.1 Multiplexor de 4 a 1
 
-|$s_1$|$s_0$|Salida $Y$|
-|:---:|:---:|:---:|
-|0|0|$I_0$|
-|0|1|$I_1$|
-|1|0|$I_2$|
-|1|1|$I_3$|
+| $s_1$ | $s_0$ | Salida $Y$ |
+| :---: | :---: | :--------: |
+|   0   |   0   |   $I_0$    |
+|   0   |   1   |   $I_1$    |
+|   1   |   0   |   $I_2$    |
+|   1   |   1   |   $I_3$    |
 
 Su función es:
 
@@ -509,7 +517,8 @@ $$
 
 Solo una compuerta AND queda habilitada por cada combinación de selección y la OR transmite la entrada correspondiente.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Si $s_1s_0=10$, la salida es:
 >
 > $$
@@ -544,14 +553,15 @@ Se conectan $n-1$ variables a las líneas de selección. En las entradas de dato
 
 Cada entrada del multiplexor corresponde a una pareja de términos mínimos que solo difieren en la variable restante:
 
-|Términos incluidos en $F$|Conexión de datos|
-|---|---|
-|Ninguno|$0$|
-|Ambos|$1$|
-|Solo el término con la variable normal|Variable|
-|Solo el término con la variable complementada|Complemento de la variable|
+| Términos incluidos en $F$                     | Conexión de datos          |
+| --------------------------------------------- | -------------------------- |
+| Ninguno                                       | $0$                        |
+| Ambos                                         | $1$                        |
+| Solo el término con la variable normal        | Variable                   |
+| Solo el término con la variable complementada | Complemento de la variable |
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > Configurar:
 >
 > $$
@@ -573,7 +583,8 @@ Cada entrada del multiplexor corresponde a una pareja de términos mínimos que 
 > I_0=0,\qquad I_1=1,\qquad I_2=A,\qquad I_3=A'
 > $$
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > Configurar:
 >
 > $$
@@ -621,7 +632,8 @@ $$
 
 Cada combinación de entrada es una **dirección**. Los $m$ bits de salida forman la **palabra** almacenada en esa dirección.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Una ROM de $32\times8$ contiene 32 palabras de 8 bits. Necesita:
 >
 > $$
@@ -659,12 +671,12 @@ $$
 
 La tabla de programación es:
 
-|$A_1A_0$|$F_1F_2$|
-|:---:|:---:|
-|`00`|`01`|
-|`01`|`10`|
-|`10`|`11`|
-|`11`|`10`|
+| $A_1A_0$ | $F_1F_2$ |
+| :------: | :------: |
+|   `00`   |   `01`   |
+|   `01`   |   `10`   |
+|   `10`   |   `11`   |
+|   `11`   |   `10`   |
 
 Se necesita una ROM de $4\times2$.
 
@@ -672,16 +684,16 @@ Se necesita una ROM de $4\times2$.
 
 Un circuito recibe un número de tres bits y produce su cuadrado de seis bits:
 
-|Entrada|Cuadrado|Salida|
-|:---:|:---:|:---:|
-|`000`|0|`000000`|
-|`001`|1|`000001`|
-|`010`|4|`000100`|
-|`011`|9|`001001`|
-|`100`|16|`010000`|
-|`101`|25|`011001`|
-|`110`|36|`100100`|
-|`111`|49|`110001`|
+| Entrada | Cuadrado |  Salida  |
+| :-----: | :------: | :------: |
+|  `000`  |    0     | `000000` |
+|  `001`  |    1     | `000001` |
+|  `010`  |    4     | `000100` |
+|  `011`  |    9     | `001001` |
+|  `100`  |    16    | `010000` |
+|  `101`  |    25    | `011001` |
+|  `110`  |    36    | `100100` |
+|  `111`  |    49    | `110001` |
 
 Una ejecución directa requeriría una ROM de $8\times6$. Sin embargo:
 
@@ -693,12 +705,12 @@ Solo deben almacenarse $B_5,B_4,B_3,B_2$, por lo que basta una ROM de $8\times4$
 
 ### 11.5 Tipos de ROM
 
-|Tipo|Forma de programación o borrado|
-|---|---|
-|ROM de máscara|El fabricante fija el patrón durante la fabricación.|
-|PROM|El usuario programa de forma permanente determinados enlaces.|
-|EPROM|Puede borrarse con luz ultravioleta y programarse nuevamente.|
-|EAROM|Puede alterarse mediante señales eléctricas.|
+| Tipo           | Forma de programación o borrado                               |
+| -------------- | ------------------------------------------------------------- |
+| ROM de máscara | El fabricante fija el patrón durante la fabricación.          |
+| PROM           | El usuario programa de forma permanente determinados enlaces. |
+| EPROM          | Puede borrarse con luz ultravioleta y programarse nuevamente. |
+| EAROM          | Puede alterarse mediante señales eléctricas.                  |
 
 En este contexto, programar una ROM es un procedimiento físico de *hardware*, no la ejecución de instrucciones de software.
 
@@ -726,13 +738,13 @@ El tamaño de un PLA se especifica mediante el número de entradas, términos pr
 
 ### 12.1 ROM frente a PLA
 
-|Característica|ROM|PLA|
-|---|---|---|
-|Primer nivel|Decodificador fijo con todos los minterms|Arreglo AND programable|
-|Segundo nivel|Arreglo OR programable|Arreglo OR programable|
-|Productos generados|Los $2^n$ términos mínimos|Solo los productos necesarios|
-|Simplificación previa|No es indispensable|Sí es importante|
-|Reutilización|Una dirección puede alimentar varias salidas|Un producto puede alimentar varias salidas|
+| Característica        | ROM                                          | PLA                                        |
+| --------------------- | -------------------------------------------- | ------------------------------------------ |
+| Primer nivel          | Decodificador fijo con todos los minterms    | Arreglo AND programable                    |
+| Segundo nivel         | Arreglo OR programable                       | Arreglo OR programable                     |
+| Productos generados   | Los $2^n$ términos mínimos                   | Solo los productos necesarios              |
+| Simplificación previa | No es indispensable                          | Sí es importante                           |
+| Reutilización         | Una dirección puede alimentar varias salidas | Un producto puede alimentar varias salidas |
 
 El PLA resulta especialmente útil cuando existen muchas combinaciones de no importa o varias funciones comparten términos producto.
 
@@ -777,12 +789,12 @@ $$
 AB',\qquad AC,\qquad BC
 $$
 
-|Producto|$A$|$B$|$C$|$F_1$|$F_2$|
-|---|:---:|:---:|:---:|:---:|:---:|
-|$AB'$|1|0|-|1|-|
-|$AC$|1|-|1|1|1|
-|$BC$|-|1|1|-|1|
-|Forma de salida||||T|T|
+| Producto        |  $A$  |  $B$  |  $C$  | $F_1$ | $F_2$ |
+| --------------- | :---: | :---: | :---: | :---: | :---: |
+| $AB'$           |   1   |   0   |   -   |   1   |   -   |
+| $AC$            |   1   |   -   |   1   |   1   |   1   |
+| $BC$            |   -   |   1   |   1   |   -   |   1   |
+| Forma de salida |       |       |       |   T   |   T   |
 
 El producto $AC$ se comparte entre ambas funciones.
 
@@ -790,7 +802,8 @@ El producto $AC$ se comparte entre ambas funciones.
 
 Para un PLA deben simplificarse tanto las funciones como sus complementos. Puede convenir generar $F'$ y utilizar el inversor de salida si así se reduce la cantidad total de productos distintos.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Sean:
 >
 > $$
@@ -833,12 +846,12 @@ En un PLA, el recurso crítico suele ser el número total de términos producto 
 
 ## 14. Comparación de recursos combinacionales
 
-|Recurso|Estructura|Ventaja principal|Limitación principal|
-|---|---|---|---|
-|Decodificador + OR|Genera todos los minterms y suma los seleccionados|Un decodificador puede servir a varias funciones|Puede requerir OR de muchas entradas|
-|Multiplexor|Selecciona entre datos configurados|Implementación compacta de una función|Normalmente se necesita un MUX por salida|
-|ROM|Decodificador completo y palabras programadas|Se configura directamente desde la tabla de verdad|Genera todas las direcciones aunque no se usen|
-|PLA|AND y OR programables|Comparte productos y evita minterms innecesarios|Dispone de una cantidad finita de productos|
+| Recurso            | Estructura                                         | Ventaja principal                                  | Limitación principal                           |
+| ------------------ | -------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------- |
+| Decodificador + OR | Genera todos los minterms y suma los seleccionados | Un decodificador puede servir a varias funciones   | Puede requerir OR de muchas entradas           |
+| Multiplexor        | Selecciona entre datos configurados                | Implementación compacta de una función             | Normalmente se necesita un MUX por salida      |
+| ROM                | Decodificador completo y palabras programadas      | Se configura directamente desde la tabla de verdad | Genera todas las direcciones aunque no se usen |
+| PLA                | AND y OR programables                              | Comparte productos y evita minterms innecesarios   | Dispone de una cantidad finita de productos    |
 
 La selección depende de la cantidad de entradas y salidas, los productos compartidos, las condiciones de no importa y los componentes disponibles.
 
@@ -888,20 +901,20 @@ La selección depende de la cantidad de entradas y salidas, los productos compar
 
 ### Errores frecuentes
 
-|Error|Corrección|
-|---|---|
-|Elegir únicamente por la cantidad de compuertas|Contar pastillas, conexiones y bloques disponibles.|
-|Suponer que una suma paralela es instantánea|Considerar la propagación del arrastre.|
-|Agregar `0110` a toda suma BDC|Aplicar la corrección solo cuando $C=1$.|
-|Comparar desde el bit menos significativo|Comenzar por la posición de mayor orden.|
-|Suponer que todo decodificador activa una salida con $1$|Revisar burbujas y polaridad de activación.|
-|Confundir un decodificador con un demultiplexor|Distinguir código de selección y entrada de datos.|
-|Usar un codificador ordinario con varias entradas activas|Emplear un codificador de prioridad.|
-|Conectar todas las variables como selección de un MUX|Reservar una variable para las entradas de datos.|
-|Simplificar obligatoriamente antes de usar una ROM|Programar directamente la tabla de verdad.|
-|Confundir una dirección con una palabra|La dirección selecciona; la palabra aparece en las salidas.|
-|Programar un PLA como una ROM|Generar solo los productos necesarios.|
-|Minimizar cada salida del PLA de forma aislada|Buscar productos compartidos y considerar complementos.|
+| Error                                                     | Corrección                                                  |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
+| Elegir únicamente por la cantidad de compuertas           | Contar pastillas, conexiones y bloques disponibles.         |
+| Suponer que una suma paralela es instantánea              | Considerar la propagación del arrastre.                     |
+| Agregar `0110` a toda suma BDC                            | Aplicar la corrección solo cuando $C=1$.                    |
+| Comparar desde el bit menos significativo                 | Comenzar por la posición de mayor orden.                    |
+| Suponer que todo decodificador activa una salida con $1$  | Revisar burbujas y polaridad de activación.                 |
+| Confundir un decodificador con un demultiplexor           | Distinguir código de selección y entrada de datos.          |
+| Usar un codificador ordinario con varias entradas activas | Emplear un codificador de prioridad.                        |
+| Conectar todas las variables como selección de un MUX     | Reservar una variable para las entradas de datos.           |
+| Simplificar obligatoriamente antes de usar una ROM        | Programar directamente la tabla de verdad.                  |
+| Confundir una dirección con una palabra                   | La dirección selecciona; la palabra aparece en las salidas. |
+| Programar un PLA como una ROM                             | Generar solo los productos necesarios.                      |
+| Minimizar cada salida del PLA de forma aislada            | Buscar productos compartidos y considerar complementos.     |
 
 # Verificación del aprendizaje
 
@@ -921,7 +934,7 @@ Configure el circuito con un decodificador y compuertas externas.
 
 **Problema 3:** resuelva el problema 5-32 del libro. Liste la tabla de programación de un PLA para el convertidor de código BDC a exceso a 3 definido en el tema anterior.
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >

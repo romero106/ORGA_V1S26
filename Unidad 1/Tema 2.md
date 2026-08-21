@@ -20,10 +20,10 @@ La **lógica binaria** estudia variables que solamente pueden tomar dos valores 
 
 Estos dos valores pueden interpretarse de distintas maneras:
 
-|Valor lógico|Interpretaciones posibles|
-|:---:|---|
-|$0$|Falso, no, abierto, apagado, nivel bajo|
-|$1$|Verdadero, sí, cerrado, encendido, nivel alto|
+| Valor lógico | Interpretaciones posibles                     |
+| :----------: | --------------------------------------------- |
+|     $0$      | Falso, no, abierto, apagado, nivel bajo       |
+|     $1$      | Verdadero, sí, cerrado, encendido, nivel alto |
 
 En los sistemas digitales resulta conveniente representar estos valores mediante los bits `0` y `1`.
 
@@ -53,7 +53,8 @@ $$
 A,B,C,x,y,z
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Si una variable $A$ representa el estado de un interruptor, puede establecerse que:
 >
 > - $A=0$ cuando el interruptor está abierto.
@@ -102,7 +103,8 @@ Ambas expresiones se leen: “$x$ AND $y$ es igual a $z$”.
 
 Si alguna entrada es igual a $0$, el resultado será $0$.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $x=1$ y $y=1$:
 >
 > $$
@@ -129,7 +131,8 @@ La expresión se lee: “$x$ OR $y$ es igual a $z$”.
 
 La salida solamente será $0$ cuando todas las entradas sean iguales a $0$.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $x=0$ y $y=1$:
 >
 > $$
@@ -158,7 +161,8 @@ $$
 
 La operación NOT también se denomina **complementación lógica** o **inversión**.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Si $x=0$, entonces:
 >
 > $$
@@ -200,12 +204,12 @@ $$
 
 La Tabla 1-6 del libro presenta las operaciones AND y OR de la siguiente manera:
 
-| $x$ | $y$ | $x\cdot y$ | $x+y$ |
-| :-: | :-: | :--------: | :---: |
-|  0  |  0  |     0      |   0   |
-|  0  |  1  |     0      |   1   |
-|  1  |  0  |     0      |   1   |
-|  1  |  1  |     1      |   1   |
+|  $x$  |  $y$  | $x\cdot y$ | $x+y$ |
+| :---: | :---: | :--------: | :---: |
+|   0   |   0   |     0      |   0   |
+|   0   |   1   |     0      |   1   |
+|   1   |   0   |     0      |   1   |
+|   1   |   1   |     1      |   1   |
 
 La tabla permite comprobar que:
 
@@ -216,12 +220,13 @@ La tabla permite comprobar que:
 
 Como NOT trabaja con una sola variable, únicamente existen dos casos:
 
-| $x$ | $x'$ |
-| :-: | :--: |
-|  0  |  1   |
-|  1  |  0   |
+|  $x$  | $x'$  |
+| :---: | :---: |
+|   0   |   1   |
+|   1   |   0   |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Si las entradas son $x=1$ y $y=0$, la Tabla 1-6 permite obtener:
 >
 > $$
@@ -242,14 +247,15 @@ La **lógica binaria** no debe confundirse con la **aritmética binaria**.
 
 Aunque AND y OR utilizan símbolos parecidos a la multiplicación y la suma, sus operandos son valores lógicos individuales y sus resultados siguen definiciones lógicas.
 
-|Característica|Lógica binaria|Aritmética binaria|
-|---|---|---|
-|Objeto de trabajo|Variables lógicas|Números binarios|
-|Valores de una variable|Únicamente $0$ o $1$|Puede contener varios bits|
-|Significado de $+$|Operación OR|Suma aritmética|
-|Resultado de $1+1$|$1$|$10$|
+| Característica          | Lógica binaria       | Aritmética binaria         |
+| ----------------------- | -------------------- | -------------------------- |
+| Objeto de trabajo       | Variables lógicas    | Números binarios           |
+| Valores de una variable | Únicamente $0$ o $1$ | Puede contener varios bits |
+| Significado de $+$      | Operación OR         | Suma aritmética            |
+| Resultado de $1+1$      | $1$                  | $10$                       |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > En aritmética binaria:
 >
 > $$
@@ -282,10 +288,10 @@ Los valores físicos no tienen que ser exactamente iguales al valor nominal. Cad
 
 La Figura 1-5 del libro muestra un sistema ilustrativo con los siguientes niveles:
 
-|Estado|Valor nominal|Intervalo permitido|
-|---|---:|---:|
-|Lógica $0$|$0\ \text{V}$|$-0,5\ \text{V}$ a $0,5\ \text{V}$|
-|Lógica $1$|$3\ \text{V}$|$2\ \text{V}$ a $4\ \text{V}$|
+| Estado     | Valor nominal |                Intervalo permitido |
+| ---------- | ------------: | ---------------------------------: |
+| Lógica $0$ | $0\ \text{V}$ | $-0,5\ \text{V}$ a $0,5\ \text{V}$ |
+| Lógica $1$ | $3\ \text{V}$ |      $2\ \text{V}$ a $4\ \text{V}$ |
 
 La región comprendida entre $0,5\ \text{V}$ y $2\ \text{V}$ se atraviesa durante la transición de un estado a otro.
 
@@ -327,7 +333,8 @@ $$
 L=A\cdot B
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La lámpara se enciende únicamente cuando $A=1$ y $B=1$.
 >
 >|$A$|$B$|$L=A\cdot B$|
@@ -347,7 +354,8 @@ $$
 L=A+B
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La lámpara se enciende cuando $A=1$, cuando $B=1$ o cuando ambos son iguales a $1$.
 >
 >|$A$|$B$|$L=A+B$|
@@ -371,23 +379,23 @@ flowchart TB
 
 ### Comparación de los circuitos de conmutación
 
-|Configuración|Operación|Expresión|Condición para encender la lámpara|
-|---|---|---|---|
-|Interruptores en serie|AND|$L=A\cdot B$|Todos los interruptores están cerrados|
-|Interruptores en paralelo|OR|$L=A+B$|Al menos un interruptor está cerrado|
+| Configuración             | Operación | Expresión    | Condición para encender la lámpara     |
+| ------------------------- | --------- | ------------ | -------------------------------------- |
+| Interruptores en serie    | AND       | $L=A\cdot B$ | Todos los interruptores están cerrados |
+| Interruptores en paralelo | OR        | $L=A+B$      | Al menos un interruptor está cerrado   |
 
 ## 7. Síntesis de la lógica binaria
 
-|Concepto|Idea principal|
-|---|---|
-|Variable binaria|Solamente puede tomar los valores $0$ y $1$|
-|AND|Produce $1$ cuando todas las entradas son $1$|
-|OR|Produce $1$ cuando al menos una entrada es $1$|
-|NOT|Invierte el valor de la entrada|
-|Tabla de verdad|Enumera entradas posibles y sus resultados|
-|Señal binaria|Representación física de un valor lógico|
-|Circuito en serie|Representa una operación AND|
-|Circuito en paralelo|Representa una operación OR|
+| Concepto             | Idea principal                                 |
+| -------------------- | ---------------------------------------------- |
+| Variable binaria     | Solamente puede tomar los valores $0$ y $1$    |
+| AND                  | Produce $1$ cuando todas las entradas son $1$  |
+| OR                   | Produce $1$ cuando al menos una entrada es $1$ |
+| NOT                  | Invierte el valor de la entrada                |
+| Tabla de verdad      | Enumera entradas posibles y sus resultados     |
+| Señal binaria        | Representación física de un valor lógico       |
+| Circuito en serie    | Representa una operación AND                   |
+| Circuito en paralelo | Representa una operación OR                    |
 
 # Verificación del aprendizaje
 
@@ -406,7 +414,7 @@ flowchart LR
 
 Los interruptores $A$ y $B$ se encuentran en paralelo. El interruptor $C$ está conectado en serie con ese conjunto.
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >

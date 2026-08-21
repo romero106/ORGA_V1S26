@@ -61,12 +61,13 @@ Al traducir un grupo de ceros a un término suma de $F$:
 
 ### 2.2 Comparación de las reglas
 
-|Agrupación|Forma obtenida|Constante en $0$|Constante en $1$|
-|---|---|---|---|
-|Unos|Producto de una suma de productos|Variable complementada|Variable normal|
-|Ceros|Suma de un producto de sumas|Variable normal|Variable complementada|
+| Agrupación | Forma obtenida                    | Constante en $0$       | Constante en $1$       |
+| ---------- | --------------------------------- | ---------------------- | ---------------------- |
+| Unos       | Producto de una suma de productos | Variable complementada | Variable normal        |
+| Ceros      | Suma de un producto de sumas      | Variable normal        | Variable complementada |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-8 del libro simplifica:
 >
 > $$
@@ -222,7 +223,8 @@ Las NAND del primer nivel producen los complementos de los términos producto. L
 4. Si existe un término de un literal, compleméntelo antes de conectarlo al segundo nivel.
 5. Considere inversores adicionales si no están disponibles las entradas complementadas.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-9 del libro solicita ejecutar con NAND:
 >
 > $$
@@ -271,7 +273,8 @@ Las NOR del primer nivel complementan los términos suma y la NOR final realiza 
 4. Si existe un término de un literal, compleméntelo antes de conectarlo al segundo nivel.
 5. Considere inversores de entrada si los complementos no están disponibles.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-10 utiliza la misma función del ejemplo anterior. Como:
 >
 > $$
@@ -302,12 +305,12 @@ Las NOR del primer nivel complementan los términos suma y la NOR final realiza 
 
 ### 6.2 Resumen de NAND y NOR
 
-|Función simplificada|Forma utilizada|Derivación|Ejecución|Niveles para obtener $F$|
-|---|---|---|---|:---:|
-|$F$|Suma de productos|Agrupar unos|NAND-NAND|2|
-|$F'$|Suma de productos|Agrupar ceros|NAND-NAND más inversor|3|
-|$F$|Producto de sumas|Complementar la agrupación de ceros|NOR-NOR|2|
-|$F'$|Producto de sumas|Complementar la agrupación de unos|NOR-NOR más inversor|3|
+| Función simplificada | Forma utilizada   | Derivación                          | Ejecución              | Niveles para obtener $F$ |
+| -------------------- | ----------------- | ----------------------------------- | ---------------------- | :----------------------: |
+| $F$                  | Suma de productos | Agrupar unos                        | NAND-NAND              |            2             |
+| $F'$                 | Suma de productos | Agrupar ceros                       | NAND-NAND más inversor |            3             |
+| $F$                  | Producto de sumas | Complementar la agrupación de ceros | NOR-NOR                |            2             |
+| $F'$                 | Producto de sumas | Complementar la agrupación de unos  | NOR-NOR más inversor   |            3             |
 
 > [!warning]
 > Una suma de productos se adapta directamente a NAND-NAND; un producto de sumas se adapta directamente a NOR-NOR. Intercambiar estas formas produce una función diferente.
@@ -326,12 +329,12 @@ Estas formas pueden utilizarse físicamente para aumentar la capacidad de conexi
 
 Las ocho formas no degeneradas son:
 
-|Forma|Forma dual o equivalente|
-|---|---|
-|AND-OR|NAND-NAND|
-|OR-NAND|NOR-OR|
-|OR-AND|NOR-NOR|
-|NAND-AND|AND-NOR|
+| Forma    | Forma dual o equivalente |
+| -------- | ------------------------ |
+| AND-OR   | NAND-NAND                |
+| OR-NAND  | NOR-OR                   |
+| OR-AND   | NOR-NOR                  |
+| NAND-AND | AND-NOR                  |
 
 El primer nombre identifica las compuertas del primer nivel y el segundo nombre identifica la compuerta del segundo nivel.
 
@@ -349,7 +352,8 @@ $$
 F=[(A+B)(C+D)E]'
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-11 vuelve a utilizar la función de los ejemplos 3-9 y 3-10.
 >
 > Como:
@@ -406,7 +410,8 @@ En un mapa, una condición de no importa:
 > [!warning]
 > Una condición de no importa no debe marcarse inicialmente como $0$ o $1$. Su valor solamente se decide cuando permite obtener una agrupación más sencilla.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-12 del libro simplifica:
 >
 > $$
@@ -509,7 +514,8 @@ El guion indica que $x$ puede valer $0$ o $1$.
 
 ## 11. Procedimiento binario
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-13 del libro simplifica mediante tabulación:
 >
 > $$
@@ -613,7 +619,8 @@ Los indicadores $2$ y $8$ identifican las posiciones eliminadas.
 
 La suma de todos los primeros implicados representa la función, pero no necesariamente es mínima. Puede contener términos que resultan innecesarios para cubrir los minterms.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-14 considera:
 >
 > $$
@@ -647,7 +654,8 @@ La selección final se realiza mediante una tabla de cobertura:
 - Cada columna representa un minterm de la función.
 - Una `X` indica que el primer implicado cubre ese minterm.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-15 construye la tabla para la función del ejemplo anterior:
 >
 >|Primer implicado|1|4|6|7|8|9|10|11|15|
@@ -711,14 +719,14 @@ Las condiciones `X` pueden ayudar a crear términos mayores, pero no necesitan q
 
 ## 16. Comparación de métodos
 
-|Aspecto|Método del mapa|Método del tabulado|
-|---|---|---|
-|Naturaleza|Gráfica|Sistemática y tabular|
-|Cantidad práctica de variables|Hasta cinco o seis aproximadamente|Puede manejar más variables|
-|Búsqueda|Reconocimiento visual|Apareamiento exhaustivo|
-|Uso manual|Rápido para funciones pequeñas|Tedioso y propenso a errores rutinarios|
-|Mecanización|Poco conveniente|Adecuado para computador|
-|Resultado|Depende de reconocer todos los grupos|Garantiza la búsqueda de primeros implicados|
+| Aspecto                        | Método del mapa                       | Método del tabulado                          |
+| ------------------------------ | ------------------------------------- | -------------------------------------------- |
+| Naturaleza                     | Gráfica                               | Sistemática y tabular                        |
+| Cantidad práctica de variables | Hasta cinco o seis aproximadamente    | Puede manejar más variables                  |
+| Búsqueda                       | Reconocimiento visual                 | Apareamiento exhaustivo                      |
+| Uso manual                     | Rápido para funciones pequeñas        | Tedioso y propenso a errores rutinarios      |
+| Mecanización                   | Poco conveniente                      | Adecuado para computador                     |
+| Resultado                      | Depende de reconocer todos los grupos | Garantiza la búsqueda de primeros implicados |
 
 Ambos métodos, tal como se presentan en el libro, simplifican funciones expresadas en formas normalizadas.
 
@@ -750,18 +758,18 @@ La secuencia Gray concreta puede representarse de varias maneras sin cambiar el 
 
 ### Errores frecuentes
 
-|Error|Corrección|
-|---|---|
-|Agrupar unos para obtener directamente un producto de sumas|Agrupar los ceros y complementar el resultado.|
-|Aplicar a los ceros la misma regla de literales que a los unos|Invertir la convención de las variables constantes.|
-|Usar producto de sumas directamente con NAND-NAND|NAND-NAND requiere suma de productos.|
-|Usar suma de productos directamente con NOR-NOR|NOR-NOR requiere producto de sumas.|
-|Obligar a utilizar todas las `X`|Usarlas únicamente cuando mejoren la simplificación.|
-|Aparear términos que difieren en más de un bit|Cada apareamiento elimina exactamente una variable.|
-|Comparar términos con guiones incompatibles|Los guiones deben ocupar las mismas posiciones.|
-|Confundir todos los primeros implicados con la solución mínima|Seleccionar un conjunto mínimo mediante la tabla de cobertura.|
-|Omitir un primer implicado esencial|Toda columna con una sola `X` obliga a seleccionar su fila.|
-|Incluir las condiciones de no importa como columnas obligatorias|Solo los minterms verdaderos necesitan ser cubiertos.|
+| Error                                                            | Corrección                                                     |
+| ---------------------------------------------------------------- | -------------------------------------------------------------- |
+| Agrupar unos para obtener directamente un producto de sumas      | Agrupar los ceros y complementar el resultado.                 |
+| Aplicar a los ceros la misma regla de literales que a los unos   | Invertir la convención de las variables constantes.            |
+| Usar producto de sumas directamente con NAND-NAND                | NAND-NAND requiere suma de productos.                          |
+| Usar suma de productos directamente con NOR-NOR                  | NOR-NOR requiere producto de sumas.                            |
+| Obligar a utilizar todas las `X`                                 | Usarlas únicamente cuando mejoren la simplificación.           |
+| Aparear términos que difieren en más de un bit                   | Cada apareamiento elimina exactamente una variable.            |
+| Comparar términos con guiones incompatibles                      | Los guiones deben ocupar las mismas posiciones.                |
+| Confundir todos los primeros implicados con la solución mínima   | Seleccionar un conjunto mínimo mediante la tabla de cobertura. |
+| Omitir un primer implicado esencial                              | Toda columna con una sola `X` obliga a seleccionar su fila.    |
+| Incluir las condiciones de no importa como columnas obligatorias | Solo los minterms verdaderos necesitan ser cubiertos.          |
 
 # Verificación del aprendizaje
 
@@ -781,7 +789,7 @@ La secuencia Gray concreta puede representarse de varias maneras sin cambiar el 
 1. $F(A,B,C,D,E,F,G)=\sum(20,28,52,60)$
 2. $F(A,B,C,D,E,F,G)=\sum(20,28,38,39,52,60,102,103,127)$
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >

@@ -150,14 +150,14 @@ Un **álgebra de Boole** es una estructura formada por:
 
 Para todos los elementos $x,y,z\in B$ deben cumplirse los siguientes postulados:
 
-|N.º|Respecto de $+$|Respecto de $\cdot$|
-|:---:|---|---|
-|1|$B$ es cerrado respecto de $+$.|$B$ es cerrado respecto de $\cdot$.|
-|2|$x+0=x$|$x\cdot1=x$|
-|3|$x+y=y+x$|$xy=yx$|
-|4|$x(y+z)=xy+xz$|$x+yz=(x+y)(x+z)$|
-|5|$x+x'=1$|$xx'=0$|
-|6|Existen al menos dos elementos distintos en $B$.|En particular, $0\ne1$.|
+|  N.º  | Respecto de $+$                                  | Respecto de $\cdot$                 |
+| :---: | ------------------------------------------------ | ----------------------------------- |
+|   1   | $B$ es cerrado respecto de $+$.                  | $B$ es cerrado respecto de $\cdot$. |
+|   2   | $x+0=x$                                          | $x\cdot1=x$                         |
+|   3   | $x+y=y+x$                                        | $xy=yx$                             |
+|   4   | $x(y+z)=xy+xz$                                   | $x+yz=(x+y)(x+z)$                   |
+|   5   | $x+x'=1$                                         | $xx'=0$                             |
+|   6   | Existen al menos dos elementos distintos en $B$. | En particular, $0\ne1$.             |
 
 El elemento $x'$ recibe el nombre de **complemento** de $x$.
 
@@ -168,13 +168,13 @@ El elemento $x'$ recibe el nombre de **complemento** de $x$.
 
 Aunque se emplean símbolos semejantes, ambos sistemas poseen reglas diferentes:
 
-|Álgebra ordinaria|Álgebra de Boole|
-|---|---|
-|$1+1=2$|$1+1=1$|
-|La suma no distribuye sobre el producto.|$x+yz=(x+y)(x+z)$|
-|Existen resta y división.|No existen resta ni división booleanas.|
-|No posee un operador de complemento equivalente.|Cada elemento posee un complemento $x'$.|
-|Puede contener infinitos elementos.|La aplicación bivalente contiene $0$ y $1$.|
+| Álgebra ordinaria                                | Álgebra de Boole                            |
+| ------------------------------------------------ | ------------------------------------------- |
+| $1+1=2$                                          | $1+1=1$                                     |
+| La suma no distribuye sobre el producto.         | $x+yz=(x+y)(x+z)$                           |
+| Existen resta y división.                        | No existen resta ni división booleanas.     |
+| No posee un operador de complemento equivalente. | Cada elemento posee un complemento $x'$.    |
+| Puede contener infinitos elementos.              | La aplicación bivalente contiene $0$ y $1$. |
 
 ## 4. Álgebra booleana bivalente
 
@@ -186,25 +186,25 @@ $$
 
 Los dos operadores binarios y el complemento corresponden a las operaciones lógicas:
 
-|Operación booleana|Operación lógica|
-|---|---|
-|$x\cdot y$|AND|
-|$x+y$|OR|
-|$x'$|NOT|
+| Operación booleana | Operación lógica |
+| ------------------ | ---------------- |
+| $x\cdot y$         | AND              |
+| $x+y$              | OR               |
+| $x'$               | NOT              |
 
 ### 4.1 Tablas de operación
 
-|$x$|$y$|$xy$|$x+y$|
-|:---:|:---:|:---:|:---:|
-|0|0|0|0|
-|0|1|0|1|
-|1|0|0|1|
-|1|1|1|1|
+|  $x$  |  $y$  | $xy$  | $x+y$ |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |
+|   0   |   1   |   0   |   1   |
+|   1   |   0   |   0   |   1   |
+|   1   |   1   |   1   |   1   |
 
-|$x$|$x'$|
-|:---:|:---:|
-|0|1|
-|1|0|
+|  $x$  | $x'$  |
+| :---: | :---: |
+|   0   |   1   |
+|   1   |   0   |
 
 Estas tablas permiten verificar que el conjunto $\{0,1\}$ satisface los seis postulados de Huntington.
 
@@ -217,7 +217,8 @@ Los postulados y teoremas del álgebra de Boole aparecen en pares. El **dual** d
 
 Las variables y sus complementos no cambian.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La identidad:
 >
 > $$
@@ -247,18 +248,18 @@ $$
 
 La tabla 2-1 del libro reúne los postulados y teoremas fundamentales del álgebra de Boole.
 
-|Nombre|Forma OR|Forma AND o dual|
-|---|---|---|
-|Identidad|$x+0=x$|$x\cdot1=x$|
-|Complemento|$x+x'=1$|$xx'=0$|
-|Idempotencia|$x+x=x$|$xx=x$|
-|Dominación|$x+1=1$|$x\cdot0=0$|
-|Involución|$(x')'=x$|$(x')'=x$|
-|Conmutativa|$x+y=y+x$|$xy=yx$|
-|Asociativa|$x+(y+z)=(x+y)+z$|$x(yz)=(xy)z$|
-|Distributiva|$x+yz=(x+y)(x+z)$|$x(y+z)=xy+xz$|
-|De Morgan|$(x+y)'=x'y'$|$(xy)'=x'+y'$|
-|Absorción|$x+xy=x$|$x(x+y)=x$|
+| Nombre       | Forma OR          | Forma AND o dual |
+| ------------ | ----------------- | ---------------- |
+| Identidad    | $x+0=x$           | $x\cdot1=x$      |
+| Complemento  | $x+x'=1$          | $xx'=0$          |
+| Idempotencia | $x+x=x$           | $xx=x$           |
+| Dominación   | $x+1=1$           | $x\cdot0=0$      |
+| Involución   | $(x')'=x$         | $(x')'=x$        |
+| Conmutativa  | $x+y=y+x$         | $xy=yx$          |
+| Asociativa   | $x+(y+z)=(x+y)+z$ | $x(yz)=(xy)z$    |
+| Distributiva | $x+yz=(x+y)(x+z)$ | $x(y+z)=xy+xz$   |
+| De Morgan    | $(x+y)'=x'y'$     | $(xy)'=x'+y'$    |
+| Absorción    | $x+xy=x$          | $x(x+y)=x$       |
 
 Estas relaciones permiten sustituir una expresión por otra equivalente sin cambiar el valor de la función.
 
@@ -266,7 +267,8 @@ Estas relaciones permiten sustituir una expresión por otra equivalente sin camb
 
 Los teoremas se derivan a partir de los postulados y de teoremas previamente demostrados.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El teorema de absorción puede demostrarse de la siguiente manera:
 >
 > $$
@@ -289,12 +291,12 @@ $$
 (x+y)'=x'y'
 $$
 
-|$x$|$y$|$x+y$|$(x+y)'$|$x'$|$y'$|$x'y'$|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|0|0|0|1|1|1|1|
-|0|1|1|0|1|0|0|
-|1|0|1|0|0|1|0|
-|1|1|1|0|0|0|0|
+|  $x$  |  $y$  | $x+y$ | $(x+y)'$ | $x'$  | $y'$  | $x'y'$ |
+| :---: | :---: | :---: | :------: | :---: | :---: | :----: |
+|   0   |   0   |   0   |    1     |   1   |   1   |   1    |
+|   0   |   1   |   1   |    0     |   1   |   0   |   0    |
+|   1   |   0   |   1   |    0     |   0   |   1   |   0    |
+|   1   |   1   |   1   |    0     |   0   |   0   |   0    |
 
 Las columnas $(x+y)'$ y $x'y'$ son iguales; por ello, la identidad es válida.
 
@@ -327,7 +329,8 @@ Una **función booleana** es una expresión formada por variables binarias, oper
 
 Para cada combinación de valores de entrada, la función produce un único valor de salida perteneciente a $\{0,1\}$.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para la función:
 >
 > $$
@@ -372,7 +375,8 @@ $$
 
 Mano señala que no existe una secuencia algebraica única que garantice siempre la forma mínima. Es necesario aplicar los postulados y teoremas hasta obtener una reducción útil.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 2-1 del libro simplifica cinco expresiones:
 >
 > **1.**
@@ -449,7 +453,8 @@ Para obtener el complemento de una expresión:
 
 ### 10.1 Aplicación repetida de De Morgan
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > En el ejemplo 2-2 del libro:
 >
 > $$
@@ -467,7 +472,8 @@ Para obtener el complemento de una expresión:
 > \end{aligned}
 > $$
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > Para la segunda función del ejemplo 2-2:
 >
 > $$
@@ -525,16 +531,16 @@ $$
 
 ### 11.3 Tabla de tres variables
 
-|$x$|$y$|$z$|Término mínimo|Designación|Término máximo|Designación|
-|:---:|:---:|:---:|---|:---:|---|:---:|
-|0|0|0|$x'y'z'$|$m_0$|$x+y+z$|$M_0$|
-|0|0|1|$x'y'z$|$m_1$|$x+y+z'$|$M_1$|
-|0|1|0|$x'yz'$|$m_2$|$x+y'+z$|$M_2$|
-|0|1|1|$x'yz$|$m_3$|$x+y'+z'$|$M_3$|
-|1|0|0|$xy'z'$|$m_4$|$x'+y+z$|$M_4$|
-|1|0|1|$xy'z$|$m_5$|$x'+y+z'$|$M_5$|
-|1|1|0|$xyz'$|$m_6$|$x'+y'+z$|$M_6$|
-|1|1|1|$xyz$|$m_7$|$x'+y'+z'$|$M_7$|
+|  $x$  |  $y$  |  $z$  | Término mínimo | Designación | Término máximo | Designación |
+| :---: | :---: | :---: | -------------- | :---------: | -------------- | :---------: |
+|   0   |   0   |   0   | $x'y'z'$       |    $m_0$    | $x+y+z$        |    $M_0$    |
+|   0   |   0   |   1   | $x'y'z$        |    $m_1$    | $x+y+z'$       |    $M_1$    |
+|   0   |   1   |   0   | $x'yz'$        |    $m_2$    | $x+y'+z$       |    $M_2$    |
+|   0   |   1   |   1   | $x'yz$         |    $m_3$    | $x+y'+z'$      |    $M_3$    |
+|   1   |   0   |   0   | $xy'z'$        |    $m_4$    | $x'+y+z$       |    $M_4$    |
+|   1   |   0   |   1   | $xy'z$         |    $m_5$    | $x'+y+z'$      |    $M_5$    |
+|   1   |   1   |   0   | $xyz'$         |    $m_6$    | $x'+y'+z$      |    $M_6$    |
+|   1   |   1   |   1   | $xyz$          |    $m_7$    | $x'+y'+z'$     |    $M_7$    |
 
 Cada término máximo es el complemento del término mínimo del mismo índice:
 
@@ -594,7 +600,8 @@ $$
 x+x'=1
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 2-4 del libro expresa:
 >
 > $$
@@ -640,7 +647,8 @@ $$
 x+yz=(x+y)(x+z)
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 2-5 del libro expresa:
 >
 > $$
@@ -721,12 +729,12 @@ $$
 
 ### 15.3 Comparación
 
-|Forma|Estructura|¿Cada término contiene todas las variables?|
-|---|---|:---:|
-|Suma canónica|Suma de minterms|Sí|
-|Producto canónico|Producto de maxterms|Sí|
-|Suma de productos normalizada|OR de términos producto|No necesariamente|
-|Producto de sumas normalizado|AND de términos suma|No necesariamente|
+| Forma                         | Estructura              | ¿Cada término contiene todas las variables? |
+| ----------------------------- | ----------------------- | :-----------------------------------------: |
+| Suma canónica                 | Suma de minterms        |                     Sí                      |
+| Producto canónico             | Producto de maxterms    |                     Sí                      |
+| Suma de productos normalizada | OR de términos producto |              No necesariamente              |
+| Producto de sumas normalizado | AND de términos suma    |              No necesariamente              |
 
 Toda forma canónica es también una forma normalizada, pero no toda forma normalizada es canónica.
 
@@ -745,15 +753,15 @@ Para resolver ejercicios de álgebra de Boole:
 
 ### Errores frecuentes
 
-|Error|Corrección|
-|---|---|
-|Tratar $+$ como suma aritmética|Recordar que representa OR.|
-|Cancelar términos como en álgebra ordinaria|No existen resta ni división booleanas.|
-|Confundir dual y complemento|El complemento también invierte cada literal.|
-|Ignorar la prioridad de operaciones|Evaluar paréntesis, NOT, AND y OR, en ese orden.|
-|Formar un minterm con la regla de los maxterms|En un minterm, el bit $0$ complementa la variable.|
-|Llamar canónica a cualquier suma de productos|En una forma canónica, cada término contiene todas las variables.|
-|Omitir el orden de las variables|El índice decimal depende de ese orden.|
+| Error                                          | Corrección                                                        |
+| ---------------------------------------------- | ----------------------------------------------------------------- |
+| Tratar $+$ como suma aritmética                | Recordar que representa OR.                                       |
+| Cancelar términos como en álgebra ordinaria    | No existen resta ni división booleanas.                           |
+| Confundir dual y complemento                   | El complemento también invierte cada literal.                     |
+| Ignorar la prioridad de operaciones            | Evaluar paréntesis, NOT, AND y OR, en ese orden.                  |
+| Formar un minterm con la regla de los maxterms | En un minterm, el bit $0$ complementa la variable.                |
+| Llamar canónica a cualquier suma de productos  | En una forma canónica, cada término contiene todas las variables. |
+| Omitir el orden de las variables               | El índice decimal depende de ese orden.                           |
 
 # Verificación del aprendizaje
 
@@ -785,7 +793,7 @@ $$
 3. $F(x,y,z)=\prod(0,3,6,7)$
 4. $F(A,B,C,D)=\prod(0,1,2,3,4,6,12)$
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >

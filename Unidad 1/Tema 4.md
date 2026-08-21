@@ -59,13 +59,13 @@ $$
 2^n\text{ cuadrados}
 $$
 
-|Variables|Cuadrados del mapa|
-|:---:|:---:|
-|2|4|
-|3|8|
-|4|16|
-|5|32|
-|6|64|
+| Variables | Cuadrados del mapa |
+| :-------: | :----------------: |
+|     2     |         4          |
+|     3     |         8          |
+|     4     |         16         |
+|     5     |         32         |
+|     6     |         64         |
 
 Cada cuadrado representa exactamente un minterm de la función.
 
@@ -149,13 +149,13 @@ $$
 n-k\text{ literales}
 $$
 
-|Cuadrados del grupo|Variables que cambian|Literales eliminados|
-|:---:|:---:|:---:|
-|1|0|0|
-|2|1|1|
-|4|2|2|
-|8|3|3|
-|16|4|4|
+| Cuadrados del grupo | Variables que cambian | Literales eliminados |
+| :-----------------: | :-------------------: | :------------------: |
+|          1          |           0           |          0           |
+|          2          |           1           |          1           |
+|          4          |           2           |          2           |
+|          8          |           3           |          3           |
+|         16          |           4           |          4           |
 
 Por tanto, cuanto mayor sea el grupo, más sencilla será la expresión resultante.
 
@@ -173,35 +173,36 @@ Para traducir un grupo a un producto:
 
 Un mapa de dos variables posee cuatro cuadrados:
 
-|$x\backslash y$|$0$|$1$|
-|:---:|:---:|:---:|
-|$0$|$m_0=x'y'$|$m_1=x'y$|
-|$1$|$m_2=xy'$|$m_3=xy$|
+| $x\backslash y$ |    $0$     |    $1$    |
+| :-------------: | :--------: | :-------: |
+|       $0$       | $m_0=x'y'$ | $m_1=x'y$ |
+|       $1$       | $m_2=xy'$  | $m_3=xy$  |
 
 Dos cuadrados adyacentes eliminan una variable. Una fila completa conserva solamente $x$ o $x'$, mientras una columna completa conserva solamente $y$ o $y'$.
 
-|Grupo|Término obtenido|
-|---|---|
-|Fila superior|$x'$|
-|Fila inferior|$x$|
-|Columna izquierda|$y'$|
-|Columna derecha|$y$|
-|Los cuatro cuadrados|$1$|
+| Grupo                | Término obtenido |
+| -------------------- | ---------------- |
+| Fila superior        | $x'$             |
+| Fila inferior        | $x$              |
+| Columna izquierda    | $y'$             |
+| Columna derecha      | $y$              |
+| Los cuatro cuadrados | $1$              |
 
 ## 5. Mapas de tres variables
 
 Un mapa de tres variables posee ocho cuadrados. Una variable identifica las filas y las otras dos identifican las columnas en código Gray.
 
-|$x\backslash yz$|$00$|$01$|$11$|$10$|
-|:---:|:---:|:---:|:---:|:---:|
-|$0$|$m_0$|$m_1$|$m_3$|$m_2$|
-|$1$|$m_4$|$m_5$|$m_7$|$m_6$|
+| $x\backslash yz$ | $00$  | $01$  | $11$  | $10$  |
+| :--------------: | :---: | :---: | :---: | :---: |
+|       $0$        | $m_0$ | $m_1$ | $m_3$ | $m_2$ |
+|       $1$        | $m_4$ | $m_5$ | $m_7$ | $m_6$ |
 
 Los cuadrados de la primera y la última columna son adyacentes porque las combinaciones $00$ y $10$ difieren solamente en $y$.
 
 ### 5.1 Agrupación de pares
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > El ejemplo 3-1 del libro presenta:
 >
 > $$
@@ -221,7 +222,8 @@ Los cuadrados de la primera y la última columna son adyacentes porque las combi
 > \boxed{F=x'y+xy'}
 > $$
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > El ejemplo 3-2 del libro presenta:
 >
 > $$
@@ -241,7 +243,8 @@ Los cuadrados de la primera y la última columna son adyacentes porque las combi
 
 ### 5.2 Superposición de grupos
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > En el ejemplo 3-3 del libro:
 >
 > $$
@@ -258,7 +261,8 @@ Los cuadrados de la primera y la última columna son adyacentes porque las combi
 
 ### 5.3 Función expresada como suma de minterms
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-4 del libro presenta:
 >
 > $$
@@ -280,18 +284,19 @@ Los cuadrados de la primera y la última columna son adyacentes porque las combi
 
 Un mapa de cuatro variables posee 16 cuadrados. Tanto las filas como las columnas siguen el orden Gray.
 
-|$wx\backslash yz$|$00$|$01$|$11$|$10$|
-|:---:|:---:|:---:|:---:|:---:|
-|$00$|$m_0$|$m_1$|$m_3$|$m_2$|
-|$01$|$m_4$|$m_5$|$m_7$|$m_6$|
-|$11$|$m_{12}$|$m_{13}$|$m_{15}$|$m_{14}$|
-|$10$|$m_8$|$m_9$|$m_{11}$|$m_{10}$|
+| $wx\backslash yz$ |   $00$   |   $01$   |   $11$   |   $10$   |
+| :---------------: | :------: | :------: | :------: | :------: |
+|       $00$        |  $m_0$   |  $m_1$   |  $m_3$   |  $m_2$   |
+|       $01$        |  $m_4$   |  $m_5$   |  $m_7$   |  $m_6$   |
+|       $11$        | $m_{12}$ | $m_{13}$ | $m_{15}$ | $m_{14}$ |
+|       $10$        |  $m_8$   |  $m_9$   | $m_{11}$ | $m_{10}$ |
 
 Las filas superior e inferior son adyacentes, al igual que las columnas izquierda y derecha. Por ello, las cuatro esquinas del mapa también forman un grupo válido de cuatro cuadrados.
 
 ### 6.1 Selección de los grupos mayores
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-5 del libro presenta:
 >
 > $$
@@ -306,7 +311,8 @@ Las filas superior e inferior son adyacentes, al igual que las columnas izquierd
 
 ### 6.2 Traducción de una expresión al mapa
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > En el ejemplo 3-6 del libro:
 >
 > $$
@@ -337,7 +343,8 @@ Un mapa de cinco variables contiene 32 cuadrados y puede considerarse como dos m
 
 Los cuadrados situados en posiciones equivalentes de ambos mapas son adyacentes porque solamente difieren en $A$. En la representación del libro, esta correspondencia puede verse como una reflexión con respecto a la línea central.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 3-7 del libro presenta:
 >
 > $$
@@ -392,14 +399,14 @@ flowchart LR
 
 ### Errores frecuentes
 
-|Error|Consecuencia|Corrección|
-|---|---|---|
-|Usar orden binario ordinario|Se agrupan cuadrados que difieren en más de una variable|Utilizar código Gray|
-|Ignorar los bordes|Se pierden grupos mayores|Revisar extremos y esquinas|
-|Formar grupos diagonales|Se combinan minterms no adyacentes|Agrupar solamente por lados|
-|Formar grupos que no son potencias de dos|La eliminación algebraica deja de ser válida|Usar grupos de $1,2,4,8,\ldots$|
-|Elegir grupos pequeños antes que grandes|La expresión conserva literales innecesarios|Buscar primero los grupos máximos|
-|No cubrir un uno|La función resultante cambia|Comprobar todos los minterms|
+| Error                                     | Consecuencia                                             | Corrección                        |
+| ----------------------------------------- | -------------------------------------------------------- | --------------------------------- |
+| Usar orden binario ordinario              | Se agrupan cuadrados que difieren en más de una variable | Utilizar código Gray              |
+| Ignorar los bordes                        | Se pierden grupos mayores                                | Revisar extremos y esquinas       |
+| Formar grupos diagonales                  | Se combinan minterms no adyacentes                       | Agrupar solamente por lados       |
+| Formar grupos que no son potencias de dos | La eliminación algebraica deja de ser válida             | Usar grupos de $1,2,4,8,\ldots$   |
+| Elegir grupos pequeños antes que grandes  | La expresión conserva literales innecesarios             | Buscar primero los grupos máximos |
+| No cubrir un uno                          | La función resultante cambia                             | Comprobar todos los minterms      |
 
 # Verificación del aprendizaje
 
@@ -423,7 +430,7 @@ $$
 F(A,B,C,D,E)=\sum(0,1,4,5,16,17,21,25,29)
 $$
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >

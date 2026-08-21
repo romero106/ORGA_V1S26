@@ -49,7 +49,8 @@ $$
 x,y\longrightarrow F
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Una compuerta AND con entradas $x$ y $y$ produce la función:
 >
 > $$
@@ -110,14 +111,15 @@ $$
 
 El símbolo gráfico posee un lado plano en las entradas y un lado curvo en la salida.
 
-|$x$|$y$|$F=xy$|
-|:---:|:---:|:---:|
-|0|0|0|
-|0|1|0|
-|1|0|0|
-|1|1|1|
+|  $x$  |  $y$  | $F=xy$ |
+| :---: | :---: | :----: |
+|   0   |   0   |   0    |
+|   0   |   1   |   0    |
+|   1   |   0   |   0    |
+|   1   |   1   |   1    |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La Figura 1-6 del libro presenta una compuerta AND de tres entradas:
 >
 > $$
@@ -138,14 +140,15 @@ $$
 
 El símbolo gráfico posee un lado curvo en las entradas y termina en una forma puntiaguda en la salida.
 
-|$x$|$y$|$F=x+y$|
-|:---:|:---:|:---:|
-|0|0|0|
-|0|1|1|
-|1|0|1|
-|1|1|1|
+|  $x$  |  $y$  | $F=x+y$ |
+| :---: | :---: | :-----: |
+|   0   |   0   |    0    |
+|   0   |   1   |    1    |
+|   1   |   0   |    1    |
+|   1   |   1   |    1    |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La Figura 1-6 del libro presenta una compuerta OR de cuatro entradas:
 >
 > $$
@@ -162,14 +165,15 @@ $$
 F=x'
 $$
 
-|$x$|$F=x'$|
-|:---:|:---:|
-|0|1|
-|1|0|
+|  $x$  | $F=x'$ |
+| :---: | :----: |
+|   0   |   1    |
+|   1   |   0    |
 
 Su símbolo es un triángulo seguido por un círculo pequeño en la salida. Este círculo indica una inversión lógica.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Si la entrada cambia de $0$ a $1$, la salida del inversor cambia de $1$ a $0$:
 >
 > $$
@@ -184,10 +188,10 @@ $$
 F=x
 $$
 
-|$x$|$F=x$|
-|:---:|:---:|
-|0|0|
-|1|1|
+|  $x$  | $F=x$ |
+| :---: | :---: |
+|   0   |   0   |
+|   1   |   1   |
 
 Su símbolo es un triángulo sin el círculo de inversión.
 
@@ -223,14 +227,15 @@ $$
 
 Su salida solamente será $0$ cuando todas las entradas sean iguales a $1$.
 
-|$x$|$y$|$xy$|$F=(xy)'$|
-|:---:|:---:|:---:|:---:|
-|0|0|0|1|
-|0|1|0|1|
-|1|0|0|1|
-|1|1|1|0|
+|  $x$  |  $y$  | $xy$  | $F=(xy)'$ |
+| :---: | :---: | :---: | :-------: |
+|   0   |   0   |   0   |     1     |
+|   0   |   1   |   0   |     1     |
+|   1   |   0   |   0   |     1     |
+|   1   |   1   |   1   |     0     |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $x=1$ y $y=1$, AND produce $1$ y la inversión cambia el resultado a $0$:
 >
 > $$
@@ -247,14 +252,15 @@ $$
 
 Su salida solamente será $1$ cuando todas las entradas sean iguales a $0$.
 
-|$x$|$y$|$x+y$|$F=(x+y)'$|
-|:---:|:---:|:---:|:---:|
-|0|0|0|1|
-|0|1|1|0|
-|1|0|1|0|
-|1|1|1|0|
+|  $x$  |  $y$  | $x+y$ | $F=(x+y)'$ |
+| :---: | :---: | :---: | :--------: |
+|   0   |   0   |   0   |     1      |
+|   0   |   1   |   1   |     0      |
+|   1   |   0   |   1   |     0      |
+|   1   |   1   |   1   |     0      |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $x=0$ y $y=0$, OR produce $0$ y la inversión cambia el resultado a $1$:
 >
 > $$
@@ -263,13 +269,13 @@ Su salida solamente será $1$ cuando todas las entradas sean iguales a $0$.
 
 ### Comparación entre NAND y NOR
 
-|Característica|NAND|NOR|
-|---|---|---|
-|Función original|AND|OR|
-|Función algebraica|$(xy)'$|$(x+y)'$|
-|Único caso con salida $0$|$x=y=1$|Todos menos $x=y=0$|
-|Único caso con salida $1$|Todos menos $x=y=1$|$x=y=0$|
-|Símbolo|AND con círculo de salida|OR con círculo de salida|
+| Característica            | NAND                      | NOR                      |
+| ------------------------- | ------------------------- | ------------------------ |
+| Función original          | AND                       | OR                       |
+| Función algebraica        | $(xy)'$                   | $(x+y)'$                 |
+| Único caso con salida $0$ | $x=y=1$                   | Todos menos $x=y=0$      |
+| Único caso con salida $1$ | Todos menos $x=y=1$       | $x=y=0$                  |
+| Símbolo                   | AND con círculo de salida | OR con círculo de salida |
 
 > [!note]
 > NAND y NOR se utilizan ampliamente como compuertas normalizadas porque pueden construirse con facilidad y permiten realizar funciones de Boole.
@@ -301,16 +307,17 @@ $$
 F=x\oplus y
 $$
 
-|$x$|$y$|$F=x\oplus y$|
-|:---:|:---:|:---:|
-|0|0|0|
-|0|1|1|
-|1|0|1|
-|1|1|0|
+|  $x$  |  $y$  | $F=x\oplus y$ |
+| :---: | :---: | :-----------: |
+|   0   |   0   |       0       |
+|   0   |   1   |       1       |
+|   1   |   0   |       1       |
+|   1   |   1   |       0       |
 
 Su símbolo es parecido al de OR, pero posee una línea curva adicional en el lado de las entradas.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > XOR puede interpretarse como un detector de diferencia:
 >
 > $$
@@ -337,16 +344,17 @@ $$
 F=x\odot y
 $$
 
-|$x$|$y$|$F=x\odot y$|
-|:---:|:---:|:---:|
-|0|0|1|
-|0|1|0|
-|1|0|0|
-|1|1|1|
+|  $x$  |  $y$  | $F=x\odot y$ |
+| :---: | :---: | :----------: |
+|   0   |   0   |      1       |
+|   0   |   1   |      0       |
+|   1   |   0   |      0       |
+|   1   |   1   |      1       |
 
 Su símbolo corresponde a XOR con un círculo de complemento en la salida.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La equivalencia puede interpretarse como un detector de igualdad:
 >
 > $$
@@ -359,42 +367,42 @@ Su símbolo corresponde a XOR con un círculo de complemento en la salida.
 
 ### Comparación entre XOR y equivalencia
 
-|Entradas|XOR|Equivalencia|
-|---|---|---|
-|Iguales|0|1|
-|Diferentes|1|0|
-|Interpretación|Detecta diferencia|Detecta igualdad|
+| Entradas       | XOR                | Equivalencia     |
+| -------------- | ------------------ | ---------------- |
+| Iguales        | 0                  | 1                |
+| Diferentes     | 1                  | 0                |
+| Interpretación | Detecta diferencia | Detecta igualdad |
 
 ## 6. Tabla general de compuertas
 
 ### 6.1 Compuertas de dos entradas
 
-|$x$|$y$|AND|OR|NAND|NOR|XOR|Equivalencia|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|0|0|0|0|1|1|0|1|
-|0|1|0|1|1|0|1|0|
-|1|0|0|1|1|0|1|0|
-|1|1|1|1|0|0|0|1|
+|  $x$  |  $y$  |  AND  |  OR   | NAND  |  NOR  |  XOR  | Equivalencia |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :----------: |
+|   0   |   0   |   0   |   0   |   1   |   1   |   0   |      1       |
+|   0   |   1   |   0   |   1   |   1   |   0   |   1   |      0       |
+|   1   |   0   |   0   |   1   |   1   |   0   |   1   |      0       |
+|   1   |   1   |   1   |   1   |   0   |   0   |   0   |      1       |
 
 ### 6.2 Compuertas de una entrada
 
-|$x$|Inversor|Separador|
-|:---:|:---:|:---:|
-|0|1|0|
-|1|0|1|
+|  $x$  | Inversor | Separador |
+| :---: | :------: | :-------: |
+|   0   |    1     |     0     |
+|   1   |    0     |     1     |
 
 ### Resumen de símbolos y funciones
 
-|Compuerta|Función|Característica del símbolo|
-|---|---|---|
-|AND|$F=xy$|Lado de entrada plano y salida curva|
-|OR|$F=x+y$|Entrada curva y salida puntiaguda|
-|Inversor|$F=x'$|Triángulo con círculo de salida|
-|Separador|$F=x$|Triángulo sin círculo|
-|NAND|$F=(xy)'$|AND con círculo de salida|
-|NOR|$F=(x+y)'$|OR con círculo de salida|
-|XOR|$F=x\oplus y$|OR con una curva adicional de entrada|
-|Equivalencia|$F=x\odot y$|XOR con círculo de salida|
+| Compuerta    | Función       | Característica del símbolo            |
+| ------------ | ------------- | ------------------------------------- |
+| AND          | $F=xy$        | Lado de entrada plano y salida curva  |
+| OR           | $F=x+y$       | Entrada curva y salida puntiaguda     |
+| Inversor     | $F=x'$        | Triángulo con círculo de salida       |
+| Separador    | $F=x$         | Triángulo sin círculo                 |
+| NAND         | $F=(xy)'$     | AND con círculo de salida             |
+| NOR          | $F=(x+y)'$    | OR con círculo de salida              |
+| XOR          | $F=x\oplus y$ | OR con una curva adicional de entrada |
+| Equivalencia | $F=x\odot y$  | XOR con círculo de salida             |
 
 ## 7. Compuertas con entradas múltiples
 
@@ -445,16 +453,16 @@ $$
 F=x\oplus y\oplus z
 $$
 
-|$x$|$y$|$z$|$F$|
-|:---:|:---:|:---:|:---:|
-|0|0|0|0|
-|0|0|1|1|
-|0|1|0|1|
-|0|1|1|0|
-|1|0|0|1|
-|1|0|1|0|
-|1|1|0|0|
-|1|1|1|1|
+|  $x$  |  $y$  |  $z$  |  $F$  |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |
+|   0   |   0   |   1   |   1   |
+|   0   |   1   |   0   |   1   |
+|   0   |   1   |   1   |   0   |
+|   1   |   0   |   0   |   1   |
+|   1   |   0   |   1   |   0   |
+|   1   |   1   |   0   |   0   |
+|   1   |   1   |   1   |   1   |
 
 > [!tip]
 > Para XOR de varias entradas, cuente la cantidad de unos:

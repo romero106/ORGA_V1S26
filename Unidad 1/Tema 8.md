@@ -61,12 +61,12 @@ La simplificación puede realizarse mediante álgebra de Boole, mapas de Karnaug
 
 La suma binaria básica se rige por:
 
-|$x$|$y$|Suma|Lleva|
-|:---:|:---:|:---:|:---:|
-|0|0|0|0|
-|0|1|1|0|
-|1|0|1|0|
-|1|1|0|1|
+|  $x$  |  $y$  | Suma  | Lleva |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |
+|   0   |   1   |   1   |   0   |
+|   1   |   0   |   1   |   0   |
+|   1   |   1   |   0   |   1   |
 
 La suma y la lleva deben representarse como salidas separadas porque $1+1=(10)_2$.
 
@@ -74,12 +74,12 @@ La suma y la lleva deben representarse como salidas separadas porque $1+1=(10)_2
 
 El **semisumador** suma dos bits. Sus entradas son $x$ y $y$; sus salidas son la suma $S$ y la lleva $C$.
 
-|$x$|$y$|$C$|$S$|
-|:---:|:---:|:---:|:---:|
-|0|0|0|0|
-|0|1|0|1|
-|1|0|0|1|
-|1|1|1|0|
+|  $x$  |  $y$  |  $C$  |  $S$  |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |
+|   0   |   1   |   0   |   1   |
+|   1   |   0   |   0   |   1   |
+|   1   |   1   |   1   |   0   |
 
 De la tabla se obtienen:
 
@@ -91,7 +91,8 @@ $$
 C=xy
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para sumar $x=1$ y $y=1$:
 >
 > $$
@@ -110,16 +111,16 @@ El semisumador no acepta una lleva procedente de una posición menos significati
 
 El **sumador completo** suma tres bits: $x$, $y$ y una lleva de entrada $z$. Produce una suma $S$ y una lleva de salida $C$.
 
-|$x$|$y$|$z$|$C$|$S$|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0|0|0|0|
-|0|0|1|0|1|
-|0|1|0|0|1|
-|0|1|1|1|0|
-|1|0|0|0|1|
-|1|0|1|1|0|
-|1|1|0|1|0|
-|1|1|1|1|1|
+|  $x$  |  $y$  |  $z$  |  $C$  |  $S$  |
+| :---: | :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |   0   |
+|   0   |   0   |   1   |   0   |   1   |
+|   0   |   1   |   0   |   0   |   1   |
+|   0   |   1   |   1   |   1   |   0   |
+|   1   |   0   |   0   |   0   |   1   |
+|   1   |   0   |   1   |   1   |   0   |
+|   1   |   1   |   0   |   1   |   0   |
+|   1   |   1   |   1   |   1   |   1   |
 
 La suma vale $1$ cuando existe una cantidad impar de unos:
 
@@ -137,7 +138,8 @@ $$
 \boxed{C=xy+xz+yz}
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $x=1$, $y=0$ y $z=1$:
 >
 > $$
@@ -176,12 +178,12 @@ En una resta binaria, $x$ representa el minuendo y $y$ el sustraendo. Cuando se 
 
 El **semisustractor** resta $y$ de $x$. Produce la diferencia $D$ y el préstamo $B$.
 
-|$x$|$y$|$B$|$D$|
-|:---:|:---:|:---:|:---:|
-|0|0|0|0|
-|0|1|1|1|
-|1|0|0|1|
-|1|1|0|0|
+|  $x$  |  $y$  |  $B$  |  $D$  |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |
+|   0   |   1   |   1   |   1   |
+|   1   |   0   |   0   |   1   |
+|   1   |   1   |   0   |   0   |
 
 Las funciones son:
 
@@ -193,7 +195,8 @@ $$
 \boxed{B=x'y}
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $x=0$ y $y=1$, se pide un préstamo. En consecuencia:
 >
 > $$
@@ -206,16 +209,16 @@ $$
 
 El **sustractor completo** considera un préstamo de entrada $z$. Sus entradas son $x$, $y$ y $z$; sus salidas son la diferencia $D$ y el préstamo de salida $B$.
 
-|$x$|$y$|$z$|$B$|$D$|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0|0|0|0|
-|0|0|1|1|1|
-|0|1|0|1|1|
-|0|1|1|1|0|
-|1|0|0|0|1|
-|1|0|1|0|0|
-|1|1|0|0|0|
-|1|1|1|1|1|
+|  $x$  |  $y$  |  $z$  |  $B$  |  $D$  |
+| :---: | :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |   0   |
+|   0   |   0   |   1   |   1   |   1   |
+|   0   |   1   |   0   |   1   |   1   |
+|   0   |   1   |   1   |   1   |   0   |
+|   1   |   0   |   0   |   0   |   1   |
+|   1   |   0   |   1   |   0   |   0   |
+|   1   |   1   |   0   |   0   |   0   |
+|   1   |   1   |   1   |   1   |   1   |
 
 La diferencia es:
 
@@ -229,7 +232,8 @@ $$
 \boxed{B=x'y+x'z+yz}
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $x=0$, $y=1$ y $z=1$ se calcula $0-1-1$. La tabla indica:
 >
 > $$
@@ -266,19 +270,19 @@ Las combinaciones que no pertenecen al código de entrada pueden tratarse como c
 
 Considérese un convertidor de BDC 8421 a exceso a 3. Las entradas son $A,B,C,D$ y las salidas $w,x,y,z$.
 
-|Decimal|BDC $ABCD$|Exceso a 3 $wxyz$|
-|:---:|:---:|:---:|
-|0|`0000`|`0011`|
-|1|`0001`|`0100`|
-|2|`0010`|`0101`|
-|3|`0011`|`0110`|
-|4|`0100`|`0111`|
-|5|`0101`|`1000`|
-|6|`0110`|`1001`|
-|7|`0111`|`1010`|
-|8|`1000`|`1011`|
-|9|`1001`|`1100`|
-|10–15|`1010`–`1111`|`XXXX`|
+| Decimal |  BDC $ABCD$   | Exceso a 3 $wxyz$ |
+| :-----: | :-----------: | :---------------: |
+|    0    |    `0000`     |      `0011`       |
+|    1    |    `0001`     |      `0100`       |
+|    2    |    `0010`     |      `0101`       |
+|    3    |    `0011`     |      `0110`       |
+|    4    |    `0100`     |      `0111`       |
+|    5    |    `0101`     |      `1000`       |
+|    6    |    `0110`     |      `1001`       |
+|    7    |    `0111`     |      `1010`       |
+|    8    |    `1000`     |      `1011`       |
+|    9    |    `1001`     |      `1100`       |
+|  10–15  | `1010`–`1111` |      `XXXX`       |
 
 Al simplificar cada salida con las seis condiciones de no importa se obtiene:
 
@@ -298,7 +302,8 @@ $$
 \boxed{w=A+BC+BD}
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para convertir el dígito decimal $6$:
 >
 > $$
@@ -389,7 +394,8 @@ La salida $F_2$ vale $1$ cuando al menos dos entradas valen $1$. Por tanto, la r
 - $F_1$ es la suma.
 - $F_2$ es la lleva.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Para $A=1$, $B=0$ y $C=1$:
 >
 > $$
@@ -410,16 +416,16 @@ La salida $F_2$ vale $1$ cuando al menos dos entradas valen $1$. Por tanto, la r
 
 El mismo circuito puede analizarse evaluando todas sus señales intermedias:
 
-|$A$|$B$|$C$|$F_2$|$F_2'$|$T_1$|$T_2$|$T_3$|$F_1$|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|0|0|0|0|1|0|0|0|0|
-|0|0|1|0|1|1|0|1|1|
-|0|1|0|0|1|1|0|1|1|
-|0|1|1|1|0|1|0|0|0|
-|1|0|0|0|1|1|0|1|1|
-|1|0|1|1|0|1|0|0|0|
-|1|1|0|1|0|1|0|0|0|
-|1|1|1|1|0|1|1|0|1|
+|  $A$  |  $B$  |  $C$  | $F_2$ | $F_2'$ | $T_1$ | $T_2$ | $T_3$ | $F_1$ |
+| :---: | :---: | :---: | :---: | :----: | :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   0   |   1    |   0   |   0   |   0   |   0   |
+|   0   |   0   |   1   |   0   |   1    |   1   |   0   |   1   |   1   |
+|   0   |   1   |   0   |   0   |   1    |   1   |   0   |   1   |   1   |
+|   0   |   1   |   1   |   1   |   0    |   1   |   0   |   0   |   0   |
+|   1   |   0   |   0   |   0   |   1    |   1   |   0   |   1   |   1   |
+|   1   |   0   |   1   |   1   |   0    |   1   |   0   |   0   |   0   |
+|   1   |   1   |   0   |   1   |   0    |   1   |   0   |   0   |   0   |
+|   1   |   1   |   1   |   1   |   0    |   1   |   1   |   0   |   1   |
 
 > [!warning]
 > Las condiciones de no importa pertenecen a la especificación del diseño. Una vez construido el circuito, todas las combinaciones físicas de entrada producen una salida determinada, incluso aquellas que no se esperaba utilizar.
@@ -451,7 +457,8 @@ Para transformar una red AND-OR-NOT en una red NAND de niveles múltiples:
 3. Cancelar las inversiones consecutivas que aparezcan en una misma línea.
 4. Ajustar los complementos de las entradas externas.
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > Para la función:
 >
 > $$
@@ -466,7 +473,8 @@ Para transformar una red AND-OR-NOT en una red NAND de niveles múltiples:
 >
 > El bloque final calcula $F=T_3+T_4$. Cada operación se reemplaza por su equivalente NAND y se cancelan las inversiones adyacentes.
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > Para:
 >
 > $$
@@ -524,7 +532,8 @@ El procedimiento de conversión es dual al de NAND:
 3. Cancelar inversiones consecutivas.
 4. Ajustar las entradas y la salida que todavía requieran complemento.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > La función:
 >
 > $$
@@ -535,12 +544,12 @@ El procedimiento de conversión es dual al de NAND:
 
 ### 8.1 Comparación entre NAND y NOR
 
-|Característica|NAND|NOR|
-|---|---|---|
-|Operación complementada|Producto|Suma|
-|Realización natural de dos niveles|NAND-NAND para suma de productos|NOR-NOR para producto de sumas|
-|Compuerta universal|Sí|Sí|
-|Conversión multinivel|Sustitución de bloques y cancelación de inversiones|Procedimiento dual al de NAND|
+| Característica                     | NAND                                                | NOR                            |
+| ---------------------------------- | --------------------------------------------------- | ------------------------------ |
+| Operación complementada            | Producto                                            | Suma                           |
+| Realización natural de dos niveles | NAND-NAND para suma de productos                    | NOR-NOR para producto de sumas |
+| Compuerta universal                | Sí                                                  | Sí                             |
+| Conversión multinivel              | Sustitución de bloques y cancelación de inversiones | Procedimiento dual al de NAND  |
 
 En una red multinivel, la mejor elección depende de la forma de la función, la disponibilidad de señales complementadas y la posibilidad de compartir términos.
 
@@ -554,12 +563,12 @@ $$
 \boxed{x\oplus y=xy'+x'y}
 $$
 
-|$x$|$y$|$x\oplus y$|
-|:---:|:---:|:---:|
-|0|0|0|
-|0|1|1|
-|1|0|1|
-|1|1|0|
+|  $x$  |  $y$  | $x\oplus y$ |
+| :---: | :---: | :---------: |
+|   0   |   0   |      0      |
+|   0   |   1   |      1      |
+|   1   |   0   |      1      |
+|   1   |   1   |      0      |
 
 ### 9.2 Equivalencia
 
@@ -569,12 +578,12 @@ $$
 \boxed{x\odot y=xy+x'y'}
 $$
 
-|$x$|$y$|$x\odot y$|
-|:---:|:---:|:---:|
-|0|0|1|
-|0|1|0|
-|1|0|0|
-|1|1|1|
+|  $x$  |  $y$  | $x\odot y$ |
+| :---: | :---: | :--------: |
+|   0   |   0   |     1      |
+|   0   |   1   |     0      |
+|   1   |   0   |     0      |
+|   1   |   1   |     1      |
 
 Por tanto:
 
@@ -648,16 +657,16 @@ Las funciones XOR y de equivalencia permiten generar y comprobar bits de paridad
 
 Sean $x,y,z$ los bits de información y $P$ el bit de paridad. Para que la palabra transmitida posea una cantidad impar de unos, $P$ debe tomar los valores siguientes:
 
-|$x$|$y$|$z$|$P$|
-|:---:|:---:|:---:|:---:|
-|0|0|0|1|
-|0|0|1|0|
-|0|1|0|0|
-|0|1|1|1|
-|1|0|0|0|
-|1|0|1|1|
-|1|1|0|1|
-|1|1|1|0|
+|  $x$  |  $y$  |  $z$  |  $P$  |
+| :---: | :---: | :---: | :---: |
+|   0   |   0   |   0   |   1   |
+|   0   |   0   |   1   |   0   |
+|   0   |   1   |   0   |   0   |
+|   0   |   1   |   1   |   1   |
+|   1   |   0   |   0   |   0   |
+|   1   |   0   |   1   |   1   |
+|   1   |   1   |   0   |   1   |
+|   1   |   1   |   1   |   0   |
 
 La función es:
 
@@ -671,7 +680,8 @@ $$
 P=(x\odot y)\oplus z
 $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > Si se transmiten los datos `101`, ya existen dos unos. El generador produce:
 >
 > $$
@@ -727,18 +737,18 @@ Con cuatro variables, la equivalencia vale $1$ cuando existe una cantidad par de
 
 ### Errores frecuentes
 
-|Error|Corrección|
-|---|---|
-|Confundir una red combinacional con una secuencial|Comprobar si hay memoria o realimentación.| 
-|Omitir la lleva de entrada en una suma de varios bits|Utilizar un sumador completo en las posiciones que reciben lleva.| 
-|Confundir la lleva con el préstamo|Derivar cada función desde su propia tabla de verdad.| 
-|Asignar valores arbitrarios a entradas inválidas de un código|Marcarlas como no importa solamente si la especificación permite excluirlas.| 
-|Minimizar cada salida sin buscar términos comunes|Comparar el costo del circuito completo.| 
-|Analizar una red NAND como si sus compuertas fueran AND|Conservar la negación de cada salida NAND.| 
-|Cancelar una sola inversión|Solo dos complementos sucesivos se anulan.| 
-|Suponer que XOR equivale a OR|XOR vale $0$ cuando ambas entradas valen $1$.| 
-|Interpretar $C=1$ como recepción correcta en el comprobador de paridad impar|En el circuito estudiado, $C=1$ indica una cantidad par de unos y, por tanto, error.| 
-|Afirmar que la paridad detecta todos los errores|Una cantidad par de alteraciones puede pasar inadvertida.| 
+| Error                                                                        | Corrección                                                                           |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Confundir una red combinacional con una secuencial                           | Comprobar si hay memoria o realimentación.                                           |
+| Omitir la lleva de entrada en una suma de varios bits                        | Utilizar un sumador completo en las posiciones que reciben lleva.                    |
+| Confundir la lleva con el préstamo                                           | Derivar cada función desde su propia tabla de verdad.                                |
+| Asignar valores arbitrarios a entradas inválidas de un código                | Marcarlas como no importa solamente si la especificación permite excluirlas.         |
+| Minimizar cada salida sin buscar términos comunes                            | Comparar el costo del circuito completo.                                             |
+| Analizar una red NAND como si sus compuertas fueran AND                      | Conservar la negación de cada salida NAND.                                           |
+| Cancelar una sola inversión                                                  | Solo dos complementos sucesivos se anulan.                                           |
+| Suponer que XOR equivale a OR                                                | XOR vale $0$ cuando ambas entradas valen $1$.                                        |
+| Interpretar $C=1$ como recepción correcta en el comprobador de paridad impar | En el circuito estudiado, $C=1$ indica una cantidad par de unos y, por tanto, error. |
+| Afirmar que la paridad detecta todos los errores                             | Una cantidad par de alteraciones puede pasar inadvertida.                            |
 
 # Verificación del aprendizaje
 
@@ -748,7 +758,7 @@ Con cuatro variables, la equivalencia vale $1$ cuando existe una cantidad par de
 
 **Problema 3:** resuelva el problema 4-28 del libro. Diseñe un convertidor de código Gray de cuatro bits a código binario utilizando compuertas OR exclusivo.
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >

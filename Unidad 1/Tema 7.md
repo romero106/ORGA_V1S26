@@ -27,10 +27,10 @@ Para cada sistema de base $r$ existen dos complementos:
 1. Complemento de $r$.
 2. Complemento de $(r-1)$.
 
-|Base|Complemento de $r$|Complemento de $(r-1)$|
-|:---:|---|---|
-|10|Complemento de 10|Complemento de 9|
-|2|Complemento de 2|Complemento de 1|
+| Base  | Complemento de $r$ | Complemento de $(r-1)$ |
+| :---: | ------------------ | ---------------------- |
+|  10   | Complemento de 10  | Complemento de 9       |
+|   2   | Complemento de 2   | Complemento de 1       |
 
 > [!note]
 > El valor de un complemento depende de la cantidad de posiciones utilizadas. Por ello, los ceros a la izquierda forman parte de la representación.
@@ -125,14 +125,16 @@ En binario, el complemento de 2 puede calcularse:
 2. Conservando los ceros menos significativos y el primer $1$.
 3. Complementando todos los bits situados a su izquierda.
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > Para obtener el complemento de 10 de `52520`, se conservan el cero final y el primer dígito distinto de cero, que es `2`. Los dígitos restantes se restan de 9:
 >
 > $$
 > 52520\longrightarrow47480
 > $$
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > Para obtener el complemento de 2 de `101100`, se conservan los dos ceros finales y el primer `1`; los bits más significativos se invierten:
 >
 > $$
@@ -234,10 +236,10 @@ $$
 C_r(N)=C_{r-1}(N)+1
 $$
 
-|Sistema|Primer complemento|Segundo complemento|
-|---|---|---|
-|Decimal|Complemento de 9|Complemento de 10 = complemento de 9 $+1$|
-|Binario|Complemento de 1|Complemento de 2 = complemento de 1 $+1$|
+| Sistema | Primer complemento | Segundo complemento                       |
+| ------- | ------------------ | ----------------------------------------- |
+| Decimal | Complemento de 9   | Complemento de 10 = complemento de 9 $+1$ |
+| Binario | Complemento de 1   | Complemento de 2 = complemento de 1 $+1$  |
 
 Complementar dos veces devuelve el número original, siempre que se conserve el mismo ancho:
 
@@ -275,7 +277,8 @@ flowchart TD
     E --> F[Anteponer signo negativo]
 ```
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 1-5 del libro utiliza el complemento de 10 para calcular:
 >
 > $$
@@ -298,7 +301,8 @@ flowchart TD
 > \boxed{72532-03250=69282}
 > $$
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 1-6 invierte el orden:
 >
 > $$
@@ -329,7 +333,8 @@ flowchart TD
 
 ### 5.1 Sustracción binaria con complemento de 2
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 1-7 aplica el mismo procedimiento en binario.
 >
 > **Caso 1: $M>N$**
@@ -389,7 +394,8 @@ El procedimiento es semejante, pero la lleva final recibe un tratamiento distint
 
 ### 6.1 Complemento de 9
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 1-8 repite las sustracciones decimales anteriores.
 >
 > **Caso 1: resultado positivo**
@@ -430,7 +436,8 @@ El procedimiento es semejante, pero la lleva final recibe un tratamiento distint
 
 ### 6.2 Complemento de 1
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El ejemplo 1-9 repite la sustracción binaria del ejemplo 1-7.
 >
 > **Caso 1: resultado positivo**
@@ -471,12 +478,12 @@ El procedimiento es semejante, pero la lleva final recibe un tratamiento distint
 
 ## 7. Complemento de 2 y complemento de 1
 
-|Característica|Complemento de 2|Complemento de 1|
-|---|---|---|
-|Obtención|Invertir bits y sumar $1$|Invertir todos los bits|
-|Cero|Una representación|Cero positivo y cero negativo|
-|Lleva final|Se descarta|Se reinicia|
-|Uso aritmético|Más conveniente|Requiere tratamiento adicional|
+| Característica | Complemento de 2          | Complemento de 1               |
+| -------------- | ------------------------- | ------------------------------ |
+| Obtención      | Invertir bits y sumar $1$ | Invertir todos los bits        |
+| Cero           | Una representación        | Cero positivo y cero negativo  |
+| Lleva final    | Se descarta               | Se reinicia                    |
+| Uso aritmético | Más conveniente           | Requiere tratamiento adicional |
 
 En complemento de 1 existen dos representaciones del cero para un ancho fijo:
 
@@ -517,13 +524,13 @@ $$
 2^n\ge N
 $$
 
-|Elementos|Bits mínimos|Combinaciones disponibles|
-|:---:|:---:|:---:|
-|4|2|4|
-|8|3|8|
-|10|4|16|
-|20|5|32|
-|52|6|64|
+| Elementos | Bits mínimos | Combinaciones disponibles |
+| :-------: | :----------: | :-----------------------: |
+|     4     |      2       |             4             |
+|     8     |      3       |             8             |
+|    10     |      4       |            16             |
+|    20     |      5       |            32             |
+|    52     |      6       |            64             |
 
 Cuando sobran combinaciones, algunas palabras del código quedan sin asignar.
 
@@ -537,18 +544,18 @@ $$
 
 Es posible construir diferentes códigos de cuatro bits. La tabla 1-2 del libro presenta los siguientes:
 
-|Dígito|BDC 8421|Exceso a 3|$8,4,-2,-1$|2421|
-|:---:|:---:|:---:|:---:|:---:|
-|0|0000|0011|0000|0000|
-|1|0001|0100|0111|0001|
-|2|0010|0101|0110|0010|
-|3|0011|0110|0101|0011|
-|4|0100|0111|0100|0100|
-|5|0101|1000|1011|1011|
-|6|0110|1001|1010|1100|
-|7|0111|1010|1001|1101|
-|8|1000|1011|1000|1110|
-|9|1001|1100|1111|1111|
+| Dígito | BDC 8421 | Exceso a 3 | $8,4,-2,-1$ | 2421  |
+| :----: | :------: | :--------: | :---------: | :---: |
+|   0    |   0000   |    0011    |    0000     | 0000  |
+|   1    |   0001   |    0100    |    0111     | 0001  |
+|   2    |   0010   |    0101    |    0110     | 0010  |
+|   3    |   0011   |    0110    |    0101     | 0011  |
+|   4    |   0100   |    0111    |    0100     | 0100  |
+|   5    |   0101   |    1000    |    1011     | 1011  |
+|   6    |   0110   |    1001    |    1010     | 1100  |
+|   7    |   0111   |    1010    |    1001     | 1101  |
+|   8    |   1000   |    1011    |    1000     | 1110  |
+|   9    |   1001   |    1100    |    1111     | 1111  |
 
 ## 11. BDC o binario decimal codificado
 
@@ -570,7 +577,8 @@ Las combinaciones desde `1010` hasta `1111` no representan dígitos decimales en
 
 Cada dígito decimal se codifica por separado.
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El decimal $395$ se representa en BDC como:
 >
 > $$
@@ -711,7 +719,8 @@ Un **bit de paridad** es un bit adicional incluido en un mensaje para controlar 
 
 El bit se elige para que la cantidad total de unos sea par.
 
-> [!example]- Ejemplo 1
+> **Ejemplo 1**
+> 
 > El mensaje `1011` contiene tres unos. Para obtener paridad par debe agregarse un bit igual a $1$:
 >
 > $$
@@ -724,7 +733,8 @@ El bit se elige para que la cantidad total de unos sea par.
 
 El bit se elige para que la cantidad total de unos sea impar.
 
-> [!example]- Ejemplo 2
+> **Ejemplo 2**
+> 
 > El mensaje `1011` ya contiene tres unos. Su bit de paridad impar es $0$:
 >
 > $$
@@ -750,16 +760,16 @@ El **código reflejado**, conocido también como **código Gray**, posee la prop
 
 La tabla 1-4 presenta el código Gray de cuatro bits:
 
-|Decimal|Código Gray|Decimal|Código Gray|
-|:---:|:---:|:---:|:---:|
-|0|0000|8|1100|
-|1|0001|9|1101|
-|2|0011|10|1111|
-|3|0010|11|1110|
-|4|0110|12|1010|
-|5|0111|13|1011|
-|6|0101|14|1001|
-|7|0100|15|1000|
+| Decimal | Código Gray | Decimal | Código Gray |
+| :-----: | :---------: | :-----: | :---------: |
+|    0    |    0000     |    8    |    1100     |
+|    1    |    0001     |    9    |    1101     |
+|    2    |    0011     |   10    |    1111     |
+|    3    |    0010     |   11    |    1110     |
+|    4    |    0110     |   12    |    1010     |
+|    5    |    0111     |   13    |    1011     |
+|    6    |    0101     |   14    |    1001     |
+|    7    |    0100     |   15    |    1000     |
 
 ### 17.1 Utilidad
 
@@ -787,16 +797,17 @@ ASCII significa *American Standard Code for Information Interchange*. La versió
 
 Algunos caracteres son:
 
-|Carácter|ASCII de 7 bits|
-|:---:|:---:|
-|A|1000001|
-|B|1000010|
-|J|1001010|
-|0|0110000|
-|1|0110001|
-|Espacio|0100000|
+| Carácter | ASCII de 7 bits |
+| :------: | :-------------: |
+|    A     |     1000001     |
+|    B     |     1000010     |
+|    J     |     1001010     |
+|    0     |     0110000     |
+|    1     |     0110001     |
+| Espacio  |     0100000     |
 
-> [!example]- Ejemplo
+> **Ejemplo**
+>
 > El libro representa “John Doe” mediante su código interno de seis bits:
 >
 > $$
@@ -849,18 +860,18 @@ El código de tarjeta utiliza doce posiciones. Un orificio representa $1$ y la a
 
 ### Errores frecuentes
 
-|Error|Corrección|
-|---|---|
-|Calcular un complemento sin fijar el ancho|Conservar la misma cantidad de posiciones.|
-|Omitir ceros a la izquierda|Igualar el ancho de los operandos.|
-|Confundir complemento de 1 y de 2|El complemento de 2 agrega una unidad.|
-|Conservar la lleva en complemento de $r$|La lleva debe descartarse.|
-|Descartar la lleva en complemento de $(r-1)$|Debe reiniciarse en la posición menos significativa.|
-|Codificar un número decimal completo como un solo binario BDC|Codificar cada dígito por separado.|
-|Usar palabras BDC entre `1010` y `1111`|Estas combinaciones no representan dígitos.|
-|Suponer que la paridad corrige el error|Solamente permite detectar ciertas alteraciones.|
-|Esperar que la paridad detecte dos errores|Una cantidad par de cambios puede conservar la paridad.|
-|Leer Gray como binario posicional|Interpretarlo como una asignación de código.|
+| Error                                                         | Corrección                                              |
+| ------------------------------------------------------------- | ------------------------------------------------------- |
+| Calcular un complemento sin fijar el ancho                    | Conservar la misma cantidad de posiciones.              |
+| Omitir ceros a la izquierda                                   | Igualar el ancho de los operandos.                      |
+| Confundir complemento de 1 y de 2                             | El complemento de 2 agrega una unidad.                  |
+| Conservar la lleva en complemento de $r$                      | La lleva debe descartarse.                              |
+| Descartar la lleva en complemento de $(r-1)$                  | Debe reiniciarse en la posición menos significativa.    |
+| Codificar un número decimal completo como un solo binario BDC | Codificar cada dígito por separado.                     |
+| Usar palabras BDC entre `1010` y `1111`                       | Estas combinaciones no representan dígitos.             |
+| Suponer que la paridad corrige el error                       | Solamente permite detectar ciertas alteraciones.        |
+| Esperar que la paridad detecte dos errores                    | Una cantidad par de cambios puede conservar la paridad. |
+| Leer Gray como binario posicional                             | Interpretarlo como una asignación de código.            |
 
 # Verificación del aprendizaje
 
@@ -886,7 +897,7 @@ El código de tarjeta utiliza doce posiciones. Un orificio representa $1$ y la a
 3. Código 2421.
 4. Número binario puro.
 
-> [!success]- Soluciones
+> **Soluciones**
 >
 > **Problema 1**
 >
