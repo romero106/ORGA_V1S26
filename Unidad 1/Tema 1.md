@@ -26,7 +26,7 @@ En un sistema **posicional**, el valor de un dígito depende de:
 
 > **Ejemplo**
 >
-> En el número decimal `7392`, el dígito `7` no representa siete unidades, sino siete millares, porque ocupa la posición correspondiente a $10^3$:
+> En el número decimal `7392`, el dígito `7` no representa siete unidades, sino siete millares, porque ocupa la posición correspondiente a $10^3\text{:}$
 >
 > $$
 > 7392 = 7(10^3)+3(10^2)+9(10^1)+2(10^0)
@@ -586,14 +586,14 @@ El sistema hexadecimal es especialmente conveniente porque cada dígito reemplaz
 >3. $(117,75)_{10}$
 >4. $(109,875)_{10}$
 >
-> ### **Problema 4**
+> **Problema 4**
 > 
 > 1. $`(225{,}225)_{10} = (11100001{,}001\overline{1100})_2 = (341{,}1\overline{6314})_8 = (E1{,}3\overline{9})_{16}`$
 > 2. $`(11010111{,}110)_2 = (215{,}75)_{10} = (327{,}6)_8 = (D7{,}C)_{16}`$
 > 3. $`(623{,}77)_8 = (403{,}984375)_{10} = (110010011{,}111111)_2 = (193{,}FC)_{16}`$
 > 4. $`(2AC5{,}D)_{16} = (10949{,}8125)_{10} = (25305{,}64)_8 = (10101011000101{,}1101)_2`$
 > 
-> ### **Problema 5**
+> **Problema 5**
 > 
 > 1. $`(1001001{,}011)_2 = (73{,}375)_{10}`$
 > 2. $`(12121)_3 = (151)_{10}`$
