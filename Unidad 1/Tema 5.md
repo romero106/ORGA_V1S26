@@ -862,9 +862,6 @@ $$
 > \boxed{F(A,B,C,D)=\sum(5,7,8,9,10,11,13,14,15)}
 > $$
 
-<table width="100%">
-  <tr>
-    <td align="left"><a href="./Tema%204.md">⬅️ Tema anterior</a></td>
-    <td align="right"><a href="./Tema%206.md">Siguiente tema ➡️</a></td>
-  </tr>
-</table>
+<p align="center">
+  <a href="./Tema%204.md">⬅️ Tema anterior</a> | <a href="./Tema%206.md">Siguiente tema ➡️</a>
+</p>

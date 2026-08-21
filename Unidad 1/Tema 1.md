@@ -608,9 +608,6 @@ El sistema hexadecimal es especialmente conveniente porque cada dígito reemplaz
 > [!tip]
 > Para comprobar una conversión, convierta el resultado nuevamente al sistema de origen. Si recupera el número inicial, el procedimiento probablemente es correcto.
 
-<table width="100%">
-  <tr>
-    <td align="left">⬅️ Tema anterior</td>
-    <td align="right"><a href="./Tema%202.md">Siguiente tema ➡️</a></td>
-  </tr>
-</table>
+<p align="center">
+  ⬅️ Tema anterior | <a href="./Tema%202.md">Siguiente tema ➡️</a>
+</p>
