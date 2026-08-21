@@ -868,7 +868,7 @@ La secuencia Gray concreta puede representarse de varias maneras sin cambiar el 
 > \boxed{F=A'CEF'G'+BC'D'EF+ABCDEFG}
 > $$
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T5.md">Tema anterior</a>
-  <a href="./U1-T7.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <a href="./Tema%205.md" style="float: left;">⬅️ Tema anterior</a>
+  <a href="./Tema%207.md">Siguiente tema ➡️</a>
+</p>

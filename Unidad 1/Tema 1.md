@@ -608,7 +608,7 @@ El sistema hexadecimal es especialmente conveniente porque cada dígito reemplaz
 > [!tip]
 > Para comprobar una conversión, convierta el resultado nuevamente al sistema de origen. Si recupera el número inicial, el procedimiento probablemente es correcto.
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <span style="opacity: 0.55;">Tema anterior</span>
-  <a href="./U1-T2.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <span style="float: left;">⬅️ Tema anterior</span>
+  <a href="./Tema%202.md">Siguiente tema ➡️</a>
+</p>

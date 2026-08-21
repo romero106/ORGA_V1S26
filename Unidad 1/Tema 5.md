@@ -862,7 +862,7 @@ $$
 > \boxed{F(A,B,C,D)=\sum(5,7,8,9,10,11,13,14,15)}
 > $$
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T4.md">Tema anterior</a>
-  <a href="./U1-T6.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <a href="./Tema%204.md" style="float: left;">⬅️ Tema anterior</a>
+  <a href="./Tema%206.md">Siguiente tema ➡️</a>
+</p>

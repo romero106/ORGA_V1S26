@@ -433,7 +433,7 @@ Los interruptores $A$ y $B$ se encuentran en paralelo. El interruptor $C$ está 
 > [!tip]
 > Para traducir un circuito de conmutación, identifique primero los grupos en paralelo y después las conexiones en serie.
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T1.md">Tema anterior</a>
-  <a href="./U1-T3.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <a href="./Tema%201.md" style="float: left;">⬅️ Tema anterior</a>
+  <a href="./Tema%203.md">Siguiente tema ➡️</a>
+</p>

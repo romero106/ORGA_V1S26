@@ -570,7 +570,7 @@ $$
 > [!tip]
 > Cada compuerta requiere una patilla por entrada y una patilla adicional para su salida.
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T2.md">Tema anterior</a>
-  <a href="./U1-T4.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <a href="./Tema%202.md" style="float: left;">⬅️ Tema anterior</a>
+  <a href="./Tema%204.md">Siguiente tema ➡️</a>
+</p>

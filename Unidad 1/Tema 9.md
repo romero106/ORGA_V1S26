@@ -1023,7 +1023,7 @@ Configure el circuito con un decodificador y compuertas externas.
 >
 > Cada `1` en una columna de salida conecta el producto a su compuerta OR. Las cuatro salidas se utilizan en forma verdadera.
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T8.md">Tema anterior</a>
-  <span style="opacity: 0.55;">Siguiente tema</span>
-</div>
+<p align="right">
+  <a href="./Tema%208.md" style="float: left;">⬅️ Tema anterior</a>
+  <span>Siguiente tema ➡️</span>
+</p>

@@ -1007,7 +1007,7 @@ El código de tarjeta utiliza doce posiciones. Un orificio representa $1$ y la a
 > \boxed{(8620)_{10}=(10000110101100)_2}
 > $$
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T6.md">Tema anterior</a>
-  <a href="./U1-T8.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <a href="./Tema%206.md" style="float: left;">⬅️ Tema anterior</a>
+  <a href="./Tema%208.md">Siguiente tema ➡️</a>
+</p>

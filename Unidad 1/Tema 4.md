@@ -492,7 +492,7 @@ $$
 > \boxed{F=A'B'D'+B'C'D'+AD'E}
 > $$
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T3.md">Tema anterior</a>
-  <a href="./U1-T5.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <a href="./Tema%203.md" style="float: left;">⬅️ Tema anterior</a>
+  <a href="./Tema%205.md">Siguiente tema ➡️</a>
+</p>

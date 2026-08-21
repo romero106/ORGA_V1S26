@@ -874,7 +874,7 @@ Con cuatro variables, la equivalencia vale $1$ cuando existe una cantidad par de
 > B_3=G_3,\qquad B_2=B_3\oplus G_2,\qquad B_1=B_2\oplus G_1,\qquad B_0=B_1\oplus G_0
 > $$
 
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
-  <a href="./U1-T7.md">Tema anterior</a>
-  <a href="./U1-T9.md">Siguiente tema</a>
-</div>
+<p align="right">
+  <a href="./Tema%207.md" style="float: left;">⬅️ Tema anterior</a>
+  <a href="./Tema%209.md">Siguiente tema ➡️</a>
+</p>
